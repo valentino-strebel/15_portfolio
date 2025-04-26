@@ -1,0 +1,15 @@
+@import "../../variables";
+
+.footerBackground {
+  background-color: $standardBlue;
+  width: 100%;
+  border-top: 4px solid $hoverFocus;
+}
+
+.footerContainer {
+  background-color: $standardBlue;
+  height: 291px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 100px;
+}
