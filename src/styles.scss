@@ -4,6 +4,15 @@
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
+  background-color: $standardBlue;
+}
+
+.purpleColor {
+  color: $activeClick;
+}
+
+.greenColor {
+  color: $hoverFocus;
 }
 
 .flexSpaceBetween {
@@ -12,15 +21,32 @@
   align-items: center;
 }
 
+.flexReverse {
+  flex-direction: row-reverse;
+}
+
 .gap92 {
   gap: 92px;
+}
+
+.gap35 {
+  gap: 35px;
+}
+
+.gap29 {
+  gap: 35px;
 }
 
 .gap29 {
   gap: 29px;
 }
+
 .gap24 {
   gap: 24px;
+}
+
+.gap15 {
+  gap: 15px;
 }
 
 .gap14 {
