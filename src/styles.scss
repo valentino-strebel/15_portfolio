@@ -1,8 +1,39 @@
+@import "./app/variables";
+
 * {
-  margin: auto;
+  margin: 0;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  max-width: 1440px;
+}
+
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gap92 {
+  gap: 92px;
+}
+
+.gap29 {
+  gap: 29px;
+}
+
+.gap14 {
+  gap: 14px;
+}
+
+.size23 {
+  font-size: 23px;
+}
+
+.size18 {
+  font-size: 18px;
+}
+
+.weight400 {
+  font-weight: 400px;
 }
 
 @font-face {

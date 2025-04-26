@@ -1,5 +1,51 @@
-.headerContainer {
+@import "../../variables";
+
+.headerBackground {
+  background-color: $standardBlue;
   width: 100%;
-  background-color: #141d2f;
+}
+
+.headerContainer {
+  background-color: $standardBlue;
   padding: 37px 100px;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.pageNavigationButtons {
+  button,
+  a {
+    &:hover {
+      color: $hoverFocus;
+    }
+    &:focus {
+      color: $hoverFocus;
+      text-decoration: underline;
+      text-decoration-color: $activeClick;
+    }
+  }
+}
+
+button {
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+
+.languageButtons {
+  button {
+    border-radius: 10px;
+    border: 1px solid $hoverFocus;
+    padding: 5px 8px;
+    &:focus {
+      background-color: $hoverFocus;
+      color: white;
+      font-weight: 700;
+    }
+    &:hover {
+      background-color: $activeClick;
+      color: white;
+      border-color: $activeClick;
+    }
+  }
 }
