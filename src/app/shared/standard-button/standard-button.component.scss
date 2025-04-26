@@ -1,0 +1,13 @@
+@import "../../variables";
+
+button {
+  border-style: none;
+  background-color: $hoverFocus;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  &:hover {
+    background-color: $activeClick;
+    transform: scale(1.2);
+  }
+}
