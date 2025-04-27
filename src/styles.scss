@@ -21,6 +21,12 @@
   align-items: center;
 }
 
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .flexReverse {
   flex-direction: row-reverse;
 }
@@ -70,6 +76,10 @@
 
 .size16 {
   font-size: 16px;
+}
+
+.size14 {
+  font-size: 14px;
 }
 
 .weight700 {

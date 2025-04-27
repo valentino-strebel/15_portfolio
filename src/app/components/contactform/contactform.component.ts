@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { StandardButtonComponent } from '../../shared/standard-button/standard-button.component';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, StandardButtonComponent],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })

@@ -1,18 +1,41 @@
 /* Style inputs with type="text", select elements and textareas */
-input[type="text"],
-select,
-textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+@import "../../variables";
+
+.contact {
+  padding: $screenPadding;
 }
 
-/* Style the submit button with a specific background color etc */
+.contactContainer {
+  max-width: 1440px;
+  margin: auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 15px 25px;
+  border: 1px solid $activeClick;
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+textarea::placeholder {
+  color: white;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid $activeClick;
+  outline: none;
+}
+
 input[type="submit"] {
   background-color: #04aa6d;
   color: white;
@@ -22,14 +45,69 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type="submit"]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+input[type="checkbox"] {
+  background-color: transparent;
+  border: 1px solid $hoverFocus;
+  appearance: none;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  &:checked::after {
+    content: "✔";
+    color: $hoverFocus;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    background-color: rgb(128, 128, 251);
+  }
+}
+
+.privacyPolicyAccept {
+  display: flex;
+  gap: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contactText {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  align-items: flex-start;
+  height: 100%;
+  width: 474px;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headline p::before {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: $activeClick;
+  width: 500px;
+  margin-right: 32px;
+  flex-shrink: 0;
+}
+
+.headline p {
+  display: flex;
+  align-items: center;
 }

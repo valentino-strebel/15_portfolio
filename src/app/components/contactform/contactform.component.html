@@ -1,32 +1,51 @@
-<div class="container">
-  <form (ngSubmit)="onSubmit()">
-    <label for="name">Name</label>
-    <input
-      [(ngModel)]="contactData.name"
-      type="text"
-      id="name"
-      name="personName"
-      placeholder="Your name.."
-    />
+<div class="headline flexCenter">
+  <p class="size90 weight700">Contact</p>
+</div>
+<div class="contact">
+  <div class="contactContainer">
+    <div class="contactText">
+      <p class="size32 weight700">Got a problem to solve?</p>
+      <p class="size16">
+        I'm excited to collaborate and contribute to meaningful projects. If
+        you're looking for a dedicated developer ready to add value to your
+        team, let's connect!
+      </p>
+      <p class="size16">Need a developer? <b>Contact Me!</b></p>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+      <input
+        [(ngModel)]="contactData.name"
+        type="text"
+        id="name"
+        name="personName"
+        placeholder="Your name"
+      />
 
-    <label for="email">Email</label>
-    <input
-      [(ngModel)]="contactData.email"
-      type="email"
-      id="email"
-      name="email"
-      placeholder="Your email.."
-    />
+      <input
+        [(ngModel)]="contactData.email"
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email"
+      />
 
-    <label for="subject">Subject</label>
-    <textarea
-      [(ngModel)]="contactData.message"
-      id="subject"
-      name="subject"
-      placeholder="Write something.."
-      style="height: 200px"
-    ></textarea>
-
-    <input type="submit" value="Submit" />
-  </form>
+      <textarea
+        [(ngModel)]="contactData.message"
+        id="subject"
+        name="subject"
+        placeholder="Your message"
+        style="height: 200px"
+      ></textarea>
+      <div class="privacyPolicyAccept">
+        <input type="checkbox" />
+        <p class="size14">
+          I've read the privacy policy and agree to the processing of my data as
+          outlined.
+        </p>
+      </div>
+      <div class="flexCenter">
+        <app-standard-button buttonText="Send message!"></app-standard-button>
+      </div>
+    </form>
+  </div>
 </div>
