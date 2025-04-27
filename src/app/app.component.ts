@@ -4,6 +4,7 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactformComponent } from './components/contactform/contactform.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     FooterComponent,
     SkillsComponent,
     PortfolioComponent,
+    ContactformComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
