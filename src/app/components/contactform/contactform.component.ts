@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { StandardButtonComponent } from '../../shared/standard-button/standard-button.component';
+import { Component, NgModule } from '@angular/core';
+import { FormsModule, NgForm } from '@angular/forms';
+import { SubmitButtonComponent } from '../../shared/submit-button/submit-button.component';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, StandardButtonComponent],
+  imports: [FormsModule, SubmitButtonComponent],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
@@ -16,7 +16,9 @@ export class ContactformComponent {
     message: '',
   };
 
-  onSubmit() {
-    console.log(this.contactData);
+  onSubmit(ngForm: NgForm) {
+    if (ngForm.valid && ngForm.submitted) {
+      console.log(this.contactData);
+    }
   }
 }

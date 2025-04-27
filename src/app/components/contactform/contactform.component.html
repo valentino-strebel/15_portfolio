@@ -12,30 +12,49 @@
       </p>
       <p class="size16">Need a developer? <b>Contact Me!</b></p>
     </div>
-    <form (ngSubmit)="onSubmit()">
-      <input
-        [(ngModel)]="contactData.name"
-        type="text"
-        id="name"
-        name="personName"
-        placeholder="Your name"
-      />
-
-      <input
-        [(ngModel)]="contactData.email"
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Your email"
-      />
-
-      <textarea
-        [(ngModel)]="contactData.message"
-        id="subject"
-        name="subject"
-        placeholder="Your message"
-        style="height: 200px"
-      ></textarea>
+    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+      <div>
+        <input
+          #name="ngModel"
+          minlength="4"
+          [(ngModel)]="contactData.name"
+          type="text"
+          id="name"
+          name="personName"
+          placeholder="Your name"
+          required
+        />
+        @if(!name.valid && name.touched) {
+        <span>Your name is required</span>}
+      </div>
+      <div>
+        <input
+          #email="ngModel"
+          [(ngModel)]="contactData.email"
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email"
+          required
+          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+        />
+        @if(!email.valid && email.touched) {
+        <span>Please enter a valid email</span>}
+      </div>
+      <div>
+        <textarea
+          #message="ngModel"
+          minlength="4"
+          [(ngModel)]="contactData.message"
+          id="subject"
+          name="subject"
+          placeholder="Your message"
+          required
+          style="height: 200px"
+        ></textarea>
+        @if(!message.valid && message.touched) {
+        <span>Please enter a message</span>}
+      </div>
       <div class="privacyPolicyAccept">
         <input type="checkbox" />
         <p class="size14">
@@ -44,7 +63,7 @@
         </p>
       </div>
       <div class="flexCenter">
-        <app-standard-button buttonText="Send message!"></app-standard-button>
+        <app-submit-button buttonText="Send message!"></app-submit-button>
       </div>
     </form>
   </div>
