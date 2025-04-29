@@ -1,11 +1,16 @@
 <header>
   <div class="headerContainer flexSpaceBetween">
-    <p>Vale</p>
+    <a href=""
+      ><button><app-company-logo></app-company-logo></button
+    ></a>
     <div class="headerMenu flexSpaceBetween gap92">
       <nav class="pageNavigationButtons flexSpaceBetween gap29">
-        <a href=""><button class="size23">About me</button></a>
-        <a href=""><button class="size23">Skills</button></a>
-        <a href=""><button class="size23">Portfolio</button></a>
+        <button (click)="scrollTo('about-me')" class="size23">About me</button>
+        <button (click)="scrollTo('skills')" class="size23">Skills</button>
+        <button (click)="scrollTo('portfolio')" class="size23">
+          Portfolio
+        </button>
+        <button (click)="scrollTo('contact')" class="size23">Contact</button>
       </nav>
       <div class="languageButtons flexSpaceBetween gap14">
         <button class="size18">DE</button>

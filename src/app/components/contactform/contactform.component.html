@@ -1,7 +1,7 @@
-<div class="headline flexCenter">
-  <p class="size90 weight700">Contact</p>
-</div>
 <div class="contact">
+  <div class="headline flexCenter">
+    <p class="size90 weight700">Contact</p>
+  </div>
   <div class="contactContainer">
     <div class="contactText">
       <p class="size32 weight700">Got a problem to solve?</p>
@@ -23,6 +23,7 @@
           name="personName"
           placeholder="Your name"
           required
+          [class.invalid]="!name.valid && name.touched"
         />
         @if(!name.valid && name.touched) {
         <span>Your name is required</span>}
@@ -37,6 +38,7 @@
           placeholder="Your email"
           required
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+          [class.invalid]="!email.valid && email.touched"
         />
         @if(!email.valid && email.touched) {
         <span>Please enter a valid email</span>}
@@ -51,6 +53,7 @@
           placeholder="Your message"
           required
           style="height: 200px"
+          [class.invalid]="!message.valid && message.touched"
         ></textarea>
         @if(!message.valid && message.touched) {
         <span>Please enter a message</span>}
@@ -66,5 +69,12 @@
         <app-submit-button buttonText="Send message!"></app-submit-button>
       </div>
     </form>
+  </div>
+  <div class="goUp">
+    <img
+      (click)="scrollToTop()"
+      src="../../../assets/img/icons/4. Go up button.svg"
+      alt="Go Up"
+    />
   </div>
 </div>

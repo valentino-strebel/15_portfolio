@@ -97,6 +97,10 @@ form {
   justify-content: space-between;
 }
 
+.headline {
+  margin-bottom: 100px;
+}
+
 .headline p::before {
   content: "";
   display: block;
@@ -114,4 +118,17 @@ form {
 
 span {
   color: red;
+}
+
+.goUp {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.invalid {
+  border-color: red !important;
+  outline: none;
 }

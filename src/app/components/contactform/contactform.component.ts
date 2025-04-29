@@ -39,6 +39,11 @@ export class ContactformComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.contactData = {
+              name: '',
+              email: '',
+              message: '',
+            };
           },
           error: (error) => {
             console.error(error);
@@ -48,5 +53,9 @@ export class ContactformComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     }
+  }
+
+  scrollToTop() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 }
