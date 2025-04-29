@@ -37,6 +37,17 @@ export class ReferenceComponent {
         de: 'Herr Strebel überzeugte durch seine strukturierte, sorgfältige Arbeitsweise und sein sicheres methodisches Vorgehen im Requirements Engineering. In Kundenprojekten übernahm er Verantwortung für die Qualitätssicherung, Prozessberatung und agile Koordination.',
       },
     },
+    {
+      image: '../assets/img/company_img/aldi.png',
+      company: {
+        en: 'ALDI Süd Holding - Salzburg, Austria',
+        de: 'ALDI Süd Holding - Salzburg, Österreich',
+      },
+      text: {
+        en: 'Mr. Strebel possesses profound professional expertise in the area of technical requirements assessment. Thanks to his strong conceptual thinking abilities, he is able to maintain an overview even in very stressful situations, to assess facts correctly and to initiate target-oriented measures taking into account all relevant developments.',
+        de: 'Herr Strebel verfügt über fundierte fachliche Expertise im Bereich der technischen Anforderungsanalyse. Dank seiner ausgeprägten konzeptionellen Fähigkeiten ist er auch in sehr stressigen Situationen in der Lage, den Überblick zu behalten, Sachverhalte korrekt einzuschätzen und unter Berücksichtigung aller relevanten Entwicklungen zielgerichtete Maßnahmen einzuleiten.',
+      },
+    },
   ];
 
   nextItem() {
