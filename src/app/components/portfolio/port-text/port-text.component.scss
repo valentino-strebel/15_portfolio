@@ -2,3 +2,9 @@
   display: flex;
   flex-direction: column;
 }
+
+.portButtons {
+  display: flex;
+  justify-content: center;
+  gap: 86px;
+}

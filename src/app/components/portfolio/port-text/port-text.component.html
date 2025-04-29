@@ -1,4 +1,6 @@
 <div class="portFullDesc">
+  <img *ngIf="imageUrl" [src]="imageUrl" alt="Project Image" />
+
   <div class="portText gap15">
     <p class="size32 weight700 purpleColor">
       {{ projectName }}
@@ -11,4 +13,9 @@
     </p>
   </div>
   <div classs="portTextButton"></div>
+
+  <div class="portButtons">
+    <button>Live test</button>
+    <button>Github</button>
+  </div>
 </div>
