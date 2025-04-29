@@ -37,15 +37,16 @@ button {
     border-radius: 10px;
     border: 1px solid $hoverFocus;
     padding: 5px 8px;
-    &:focus {
-      background-color: $hoverFocus;
-      color: white;
-      font-weight: 700;
-    }
     &:hover {
       background-color: $activeClick;
       color: white;
       border-color: $activeClick;
     }
   }
+}
+
+.activeLang {
+  background-color: $hoverFocus;
+  color: white;
+  font-weight: 700;
 }

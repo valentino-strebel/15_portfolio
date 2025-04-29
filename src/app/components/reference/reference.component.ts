@@ -44,25 +44,48 @@ export class ReferenceComponent {
         de: 'ALDI Süd Holding - Salzburg, Österreich',
       },
       text: {
-        en: 'Mr. Strebel possesses profound professional expertise in the area of technical requirements assessment. Thanks to his strong conceptual thinking abilities, he is able to maintain an overview even in very stressful situations, to assess facts correctly and to initiate target-oriented measures taking into account all relevant developments.',
-        de: 'Herr Strebel verfügt über fundierte fachliche Expertise im Bereich der technischen Anforderungsanalyse. Dank seiner ausgeprägten konzeptionellen Fähigkeiten ist er auch in sehr stressigen Situationen in der Lage, den Überblick zu behalten, Sachverhalte korrekt einzuschätzen und unter Berücksichtigung aller relevanten Entwicklungen zielgerichtete Maßnahmen einzuleiten.',
+        en: 'Mr. Strebel possesses profound professional expertise in requirements assessment. He is able to maintain an overview even in very stressful situations and to initiate target-oriented measures taking into account all relevant developments.',
+        de: 'Herr Strebel verfügt über fundierte fachliche Expertise in der Anforderungsanalyse. Er ist auch in sehr stressigen Situationen in der Lage, den Überblick zu behalten und unter Berücksichtigung aller relevanten Entwicklungen zielgerichtete Maßnahmen einzuleiten.',
       },
     },
   ];
 
-  nextItem() {
+  ngOnInit(): void {
+    this.colorDots();
+  }
+
+  colorDots(): void {
+    let dotColor = document.getElementById(`symbol-${this.currentIndex}`);
+    if (dotColor) {
+      dotColor.style.color = '#9747ff';
+    }
+  }
+
+  uncolorDots(): void {
+    let previousDot = document.getElementById(`symbol-${this.currentIndex}`);
+    if (previousDot) {
+      previousDot.style.color = '#70e61c';
+    }
+  }
+
+  nextItem(): void {
+    this.uncolorDots();
     if (this.currentIndex < this.galleryItems.length - 1) {
       this.currentIndex++;
     } else {
       this.currentIndex = 0;
     }
+    this.colorDots();
   }
 
-  prevItem() {
+  prevItem(): void {
+    this.uncolorDots();
+
     if (this.currentIndex > 0) {
       this.currentIndex--;
     } else {
       this.currentIndex = this.galleryItems.length - 1;
     }
+    this.colorDots();
   }
 }

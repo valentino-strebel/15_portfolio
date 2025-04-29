@@ -5,16 +5,34 @@
     ></a>
     <div class="headerMenu flexSpaceBetween gap92">
       <nav class="pageNavigationButtons flexSpaceBetween gap29">
-        <button (click)="scrollTo('about-me')" class="size23">About me</button>
-        <button (click)="scrollTo('skills')" class="size23">Skills</button>
-        <button (click)="scrollTo('portfolio')" class="size23">
+        <button (click)="scrollService.scrollTo('about-me')" class="size23">
+          About me
+        </button>
+        <button (click)="scrollService.scrollTo('skills')" class="size23">
+          Skills
+        </button>
+        <button (click)="scrollService.scrollTo('portfolio')" class="size23">
           Portfolio
         </button>
-        <button (click)="scrollTo('contact')" class="size23">Contact</button>
+        <button (click)="scrollService.scrollTo('contact')" class="size23">
+          Contact
+        </button>
       </nav>
       <div class="languageButtons flexSpaceBetween gap14">
-        <button (click)="languageService.langDe()" class="size18">DE</button>
-        <button (click)="languageService.langEn()" class="size18">EN</button>
+        <button
+          [id]="'btnGer'"
+          (click)="languageService.langDe(); setPageLanguage()"
+          class="size18"
+        >
+          DE
+        </button>
+        <button
+          [id]="'btnEng'"
+          (click)="languageService.langEn(); setPageLanguage()"
+          class="size18"
+        >
+          EN
+        </button>
       </div>
     </div>
   </div>

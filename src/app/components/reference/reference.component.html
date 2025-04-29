@@ -10,7 +10,9 @@
         }}
       </p>
     </div>
-    <img [src]="galleryItems[currentIndex].image" alt="Company Logo" />
+    <div class="imageContainer">
+      <img [src]="galleryItems[currentIndex].image" alt="Company Logo" />
+    </div>
   </div>
   <div class="referenceSelector">
     <button (click)="prevItem()">

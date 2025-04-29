@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { LanguageService } from '../language.service';
+import { ScrollService } from '../scroll.service';
 
 @Component({
   selector: 'app-header',
@@ -10,12 +11,24 @@ import { LanguageService } from '../language.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(public languageService: LanguageService) {}
+  constructor(
+    public languageService: LanguageService,
+    public scrollService: ScrollService
+  ) {}
 
-  scrollTo(section: string) {
-    let element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  ngOnInit(): void {
+    this.setPageLanguage();
+  }
+
+  setPageLanguage() {
+    let english = document.getElementById('btnEng');
+    let german = document.getElementById('btnGer');
+    if (this.languageService.currentLanguage == 'en') {
+      english?.classList.add('activeLang');
+      german?.classList.remove('activeLang');
+    } else {
+      english?.classList.remove('activeLang');
+      german?.classList.add('activeLang');
     }
   }
 }

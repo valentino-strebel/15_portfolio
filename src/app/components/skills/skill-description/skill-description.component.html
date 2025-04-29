@@ -14,5 +14,8 @@
     frameworks and programming languages to stay at the cutting edge and bring
     fresh ideas to every project.
   </p>
-  <app-standard-button buttonText="Get in touch"></app-standard-button>
+  <app-standard-button
+    (click)="scrollService.scrollTo('contact')"
+    buttonText="Get in touch"
+  ></app-standard-button>
 </div>
