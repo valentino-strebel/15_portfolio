@@ -1,0 +1,24 @@
+@import "../../variables";
+
+.reference {
+  margin: auto;
+  max-width: 1440px;
+  padding: 0 100px;
+}
+
+.referenceContainer {
+  display: flex;
+  gap: 48px;
+  img {
+    width: 272px;
+    height: 272px;
+    border: 4px solid $activeClick;
+    border-radius: 100%;
+  }
+}
+
+.referenceText {
+  border: 4px solid $hoverFocus;
+  border-radius: 32px;
+  padding: 48px 96px;
+}
