@@ -1,21 +1,26 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LanguageService } from '../../shared/language.service';
 
 @Component({
   selector: 'app-reference',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './reference.component.html',
   styleUrl: './reference.component.scss',
 })
 export class ReferenceComponent {
-  currentIndex: number = 0;
+  constructor(public languageService: LanguageService) {}
 
-  currentLanguage: 'en' | 'de' = 'en';
+  currentIndex: number = 0;
 
   galleryItems = [
     {
       image: '../assets/img/company_img/spryflash.png',
-      company: 'SpryFlash GmbH',
+      company: {
+        en: 'SpryFlash LLC - Salzburg, Austria',
+        de: 'SpryFlash GmbH - Salzburg, Österreich',
+      },
       text: {
         en: 'Mr. Strebel impressed with his efficient, self-reliant work style and strong professional expertise. In his role as Project Manager, he successfully led complex IT projects and applied his technical knowledge to great effect.',
         de: 'Herr Strebel überzeugte durch seine effiziente, eigenverantwortliche Arbeitsweise und hohe Fachkompetenz. In seiner Rolle als Projektmanager steuerte er komplexe IT-Projekte souverän und brachte sein technisches Know-how gewinnbringend ein.',
@@ -23,11 +28,30 @@ export class ReferenceComponent {
     },
     {
       image: '../assets/img/company_img/novilio.png',
-      company: 'Novilio Consulting GmbH & Co.KG',
+      company: {
+        en: 'Novilio Consulting LLC - Munich, Germany',
+        de: 'Novilio Consulting GmbH - München, Deutschland',
+      },
       text: {
         en: 'Mr. Strebel impressed with his structured, detail-oriented approach and solid methodological expertise in requirements engineering. In client projects, he took responsibility for quality assurance, process consulting, and agile coordination.',
         de: 'Herr Strebel überzeugte durch seine strukturierte, sorgfältige Arbeitsweise und sein sicheres methodisches Vorgehen im Requirements Engineering. In Kundenprojekten übernahm er Verantwortung für die Qualitätssicherung, Prozessberatung und agile Koordination.',
       },
     },
   ];
+
+  nextItem() {
+    if (this.currentIndex < this.galleryItems.length - 1) {
+      this.currentIndex++;
+    } else {
+      this.currentIndex = 0;
+    }
+  }
+
+  prevItem() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    } else {
+      this.currentIndex = this.galleryItems.length - 1;
+    }
+  }
 }

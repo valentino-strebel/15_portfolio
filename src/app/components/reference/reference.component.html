@@ -2,11 +2,32 @@
   <div class="referenceContainer">
     <div class="referenceText">
       <p class="size20">
-        {{ galleryItems[currentIndex].text[currentLanguage] }}
+        {{ galleryItems[currentIndex].text[languageService.currentLanguage] }}
       </p>
-      <p class="size18">{{ galleryItems[currentIndex].company }}</p>
+      <p class="company size18">
+        {{
+          galleryItems[currentIndex].company[languageService.currentLanguage]
+        }}
+      </p>
     </div>
     <img [src]="galleryItems[currentIndex].image" alt="" />
   </div>
-  <div class="referenceImageContainer"></div>
+  <div class="referenceSelector">
+    <button (click)="prevItem()">
+      <img src="../../../assets/img/icons/arrow_back.svg" alt="Arrow Back" />
+    </button>
+    <div
+      class="referenceDots"
+      *ngFor="let _ of galleryItems; let i = index"
+      [id]="'symbol-' + i"
+    >
+      &#x2022;
+    </div>
+    <button (click)="nextItem()">
+      <img
+        src="../../../assets/img/icons/arrow_forward.svg"
+        alt="Arrow Forward"
+      />
+    </button>
+  </div>
 </div>

@@ -21,4 +21,57 @@
   border: 4px solid $hoverFocus;
   border-radius: 32px;
   padding: 48px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.company {
+  display: flex;
+  align-items: center;
+}
+
+.company::before {
+  content: "";
+  display: inline-block;
+  height: 2px;
+  background-color: $activeClick;
+  width: 100%;
+  margin-right: 32px;
+}
+
+.referenceSelector {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  button {
+    border-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    img {
+      background-color: transparent;
+    }
+  }
+  button:hover {
+    border: 3px solid $hoverFocus;
+    border-radius: 100%;
+  }
+  button:active {
+    border: none;
+  }
+}
+
+.referenceDots {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  color: $hoverFocus;
+  font-size: 40px;
 }
