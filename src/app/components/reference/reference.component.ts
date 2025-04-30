@@ -14,6 +14,8 @@ export class ReferenceComponent {
 
   currentIndex: number = 0;
 
+  currentSymbol: string = 'symbol-' + this.currentIndex;
+
   galleryItems = [
     {
       image: '../assets/img/company_img/spryflash.png',
@@ -50,42 +52,27 @@ export class ReferenceComponent {
     },
   ];
 
-  ngOnInit(): void {
-    this.colorDots();
-  }
-
-  colorDots(): void {
-    let dotColor = document.getElementById(`symbol-${this.currentIndex}`);
-    if (dotColor) {
-      dotColor.style.color = '#9747ff';
-    }
-  }
-
-  uncolorDots(): void {
-    let previousDot = document.getElementById(`symbol-${this.currentIndex}`);
-    if (previousDot) {
-      previousDot.style.color = '#70e61c';
-    }
-  }
-
   nextItem(): void {
-    this.uncolorDots();
     if (this.currentIndex < this.galleryItems.length - 1) {
       this.currentIndex++;
+      this.setCurrentSymbol(this.currentIndex);
     } else {
       this.currentIndex = 0;
+      this.setCurrentSymbol(this.currentIndex);
     }
-    this.colorDots();
   }
 
   prevItem(): void {
-    this.uncolorDots();
-
     if (this.currentIndex > 0) {
       this.currentIndex--;
+      this.setCurrentSymbol(this.currentIndex);
     } else {
       this.currentIndex = this.galleryItems.length - 1;
+      this.setCurrentSymbol(this.currentIndex);
     }
-    this.colorDots();
+  }
+
+  setCurrentSymbol(myI: number) {
+    this.currentSymbol = 'symbol-' + myI;
   }
 }

@@ -21,15 +21,17 @@
       <div class="languageButtons flexSpaceBetween gap14">
         <button
           [id]="'btnGer'"
-          (click)="languageService.langDe(); setPageLanguage()"
+          (click)="languageService.langDe()"
           class="size18"
+          [ngClass]="{ activeLang: languageService.currentLanguage === 'de' }"
         >
           DE
         </button>
         <button
           [id]="'btnEng'"
-          (click)="languageService.langEn(); setPageLanguage()"
+          (click)="languageService.langEn()"
           class="size18"
+          [ngClass]="{ activeLang: languageService.currentLanguage === 'en' }"
         >
           EN
         </button>

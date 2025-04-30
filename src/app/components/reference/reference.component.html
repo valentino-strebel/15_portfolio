@@ -22,6 +22,7 @@
       class="referenceDots"
       *ngFor="let _ of galleryItems; let i = index"
       [id]="'symbol-' + i"
+      [ngClass]="{ referenceActive: currentSymbol === 'symbol-' + i }"
     >
       &#x2022;
     </div>
