@@ -2,6 +2,7 @@ import { Component, NgModule, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SubmitButtonComponent } from '../../shared/submit-button/submit-button.component';
 import { HttpClient } from '@angular/common/http';
+import { LanguageService } from '../../shared/language.service';
 
 @Component({
   selector: 'app-contactform',
@@ -11,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
+  constructor(public languageService: LanguageService) {}
   http = inject(HttpClient);
 
   contactData = {

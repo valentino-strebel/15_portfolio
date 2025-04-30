@@ -5,8 +5,7 @@
     </div>
     <div class="portfolioHeader">
       <p class="size16">
-        Explore a selection of my work here - Interact with projects to see my
-        skills in action.
+        {{ subheader[0].line[languageService.currentLanguage] }}
       </p>
     </div>
 
@@ -15,7 +14,7 @@
         [ngClass]="{ 'reverse-layout': i % 2 !== 0 }"
         [imageUrl]="project.img"
         [projectName]="project.name"
-        [projectDesc]="project.desc"
+        [projectDesc]="project.desc[languageService.currentLanguage]"
         [projectTech]="project.tech"
         [projectLive]="project.gameUrl"
         [projectGit]="project.gitUrl"

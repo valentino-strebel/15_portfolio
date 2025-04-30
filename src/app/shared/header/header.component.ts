@@ -16,4 +16,13 @@ export class HeaderComponent {
     public languageService: LanguageService,
     public scrollService: ScrollService
   ) {}
+
+  headerBtn = [
+    {
+      about: { en: 'About Me', de: 'Über mich' },
+      skill: { en: 'Skills', de: 'Qualifikationen' },
+      port: { en: 'Portfolio', de: 'Portfolio' },
+      contact: { en: 'Contact', de: 'Kontakt' },
+    },
+  ];
 }
