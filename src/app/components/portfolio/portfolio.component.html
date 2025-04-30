@@ -10,13 +10,15 @@
       </p>
     </div>
 
-    <div *ngFor="let project of projects; let i = index" class="portDesc">
+    <div *ngFor="let project of projects; let i = index">
       <app-port-text
-        [ngClass]="i % 2 === 0 ? 'flexStart' : 'flexEnd'"
+        [ngClass]="{ 'reverse-layout': i % 2 !== 0 }"
         [imageUrl]="project.img"
         [projectName]="project.name"
         [projectDesc]="project.desc"
         [projectTech]="project.tech"
+        [projectLive]="project.gameUrl"
+        [projectGit]="project.gitUrl"
       ></app-port-text>
     </div>
   </div>

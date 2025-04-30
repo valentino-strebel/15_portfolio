@@ -61,3 +61,16 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.flexNormal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexReverse {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+}

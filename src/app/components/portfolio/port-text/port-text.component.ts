@@ -13,4 +13,6 @@ export class PortTextComponent {
   @Input() projectTech: string = 'Project Technology';
   @Input() projectDesc: string = 'Project Description';
   @Input() imageUrl: string = '';
+  @Input() projectLive: string = '';
+  @Input() projectGit: string = '';
 }

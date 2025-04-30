@@ -17,7 +17,7 @@ export class PortfolioComponent {
       desc: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       tech: 'HTML | CSS | JS | Firebase | Agile',
       gameUrl: 'url1',
-      gitUrl: 'url2',
+      gitUrl: 'https://github.com/vale-cannelloni/join-415',
     },
     {
       img: '../../assets/img/display/pollo.svg',
@@ -25,7 +25,7 @@ export class PortfolioComponent {
       desc: 'A simple Jump-and-Run game based on an object-oriented approach. Help Pepe to find coins and hot-sauce bottles to fight against the Boss Chicken.',
       tech: 'HTML | CSS | JS | Object Oriented',
       gameUrl: 'url1',
-      gitUrl: 'url2',
+      gitUrl: 'https://github.com/vale-cannelloni/11_pollo_loco',
     },
     {
       img: '../../assets/img/display/pokedex.svg',
@@ -33,7 +33,7 @@ export class PortfolioComponent {
       desc: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
       tech: 'HTML | CSS | JS | API',
       gameUrl: 'url1',
-      gitUrl: 'url2',
+      gitUrl: 'https://github.com/vale-cannelloni/9_pokedex',
     },
   ];
 }

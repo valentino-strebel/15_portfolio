@@ -1,10 +1,64 @@
+@import "../../../variables";
+
 .portText {
   display: flex;
   flex-direction: column;
 }
 
+.portFullDesc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &.reverse-layout {
+    flex-direction: row-reverse;
+    text-align: end;
+    align-items: flex-start;
+  }
+}
+
+:host(.reverse-layout) .portFullDesc {
+  flex-direction: row-reverse;
+  text-align: end;
+}
+
 .portButtons {
   display: flex;
-  justify-content: center;
   gap: 86px;
+  &.reverse-layout {
+    justify-content: flex-end;
+  }
+  a {
+    cursor: pointer;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 23px;
+    text-decoration: none;
+    &:hover {
+      background-color: $hoverFocus;
+    }
+    &.live:active {
+      background-color: $activeClick;
+    }
+    &.git:active {
+      background-color: transparent;
+    }
+  }
+}
+:host(.reverse-layout) .portButtons {
+  justify-content: flex-end;
+}
+
+.live {
+  border: none;
+  background-color: $activeClick;
+}
+
+.git {
+  border: 1px solid $hoverFocus;
+}
+
+.portDescBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
