@@ -11,3 +11,17 @@ footer {
   margin: auto;
   padding: 0 100px;
 }
+
+.footerButtons {
+  a {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.logoButton {
+  cursor: pointer;
+  border-style: none;
+  text-decoration: none;
+}

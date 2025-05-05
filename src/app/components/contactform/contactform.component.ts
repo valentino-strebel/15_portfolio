@@ -3,6 +3,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 import { SubmitButtonComponent } from '../../shared/submit-button/submit-button.component';
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '../../shared/language.service';
+import { ScrollService } from '../../shared/scroll.service';
 
 @Component({
   selector: 'app-contactform',
@@ -12,7 +13,10 @@ import { LanguageService } from '../../shared/language.service';
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
-  constructor(public languageService: LanguageService) {}
+  constructor(
+    public languageService: LanguageService,
+    public scrollService: ScrollService
+  ) {}
   http = inject(HttpClient);
 
   contact = [
@@ -82,9 +86,5 @@ export class ContactformComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     }
-  }
-
-  scrollToTop() {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
   }
 }

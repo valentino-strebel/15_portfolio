@@ -7,6 +7,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactformComponent } from './components/contactform/contactform.component';
 import { ReferenceComponent } from './components/reference/reference.component';
 import { AboutComponent } from './components/about/about.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
 
 @Component({
   selector: 'app-root',
@@ -20,6 +21,7 @@ import { AboutComponent } from './components/about/about.component';
     ContactformComponent,
     ReferenceComponent,
     AboutComponent,
+    IntroductionComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

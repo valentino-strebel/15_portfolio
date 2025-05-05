@@ -1,0 +1,51 @@
+<div class="intro">
+  <div class="introContainer">
+    <div class="introContent">
+      <img
+        class="profileImage"
+        src="../../../assets/img/Profile/profile.png"
+        alt="Profile"
+      />
+      <div class="introText gap35">
+        <div class="gap35 flexCenter">
+          <p class="rotate size64">
+            {{ intro[0].first[languageService.currentLanguage] }}
+          </p>
+          <div>
+            <p class="weight700 size90">{{ intro[0].second }}</p>
+            <p class="profession">
+              {{ intro[0].third[languageService.currentLanguage] }}
+            </p>
+          </div>
+        </div>
+        <app-standard-button
+          (click)="scrollService.scrollTo('contact')"
+          buttonText="{{ intro[0].button[languageService.currentLanguage] }}"
+        ></app-standard-button>
+      </div>
+    </div>
+    <div class="actionButtons">
+      <a href="https://github.com/vale-cannelloni" target="_blank"
+        ><img
+          src="../../../assets/img/icons/8. Github button.svg"
+          alt="GitHub Link"
+      /></a>
+      <a href="mailto:office@strebel-company.de" target="_blank"
+        ><img
+          src="../../../assets/img/icons/9. Email button.svg"
+          alt="Email Link"
+      /></a>
+      <a href="https://linkedin.com/in/valentino-guido-strebel" target="_blank"
+        ><img
+          src="../../../assets/img/icons/10. Linkedin button.svg"
+          alt="LinkedIn Link"
+      /></a>
+      <a
+        class="noTransform"
+        href="mailto:office@strebel-company.de"
+        target="_blank"
+        >{{ intro[0].mail }}</a
+      >
+    </div>
+  </div>
+</div>

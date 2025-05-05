@@ -37,6 +37,11 @@ html {
   align-items: center;
 }
 
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
 .flexReverse {
   flex-direction: row-reverse;
 }
@@ -68,8 +73,17 @@ html {
 .gap14 {
   gap: 14px;
 }
+
 .size90 {
   font-size: 90px;
+}
+
+.size64 {
+  font-size: 64px;
+}
+
+.size58 {
+  font-size: 58px;
 }
 
 .size32 {
