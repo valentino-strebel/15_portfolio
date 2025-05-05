@@ -1,16 +1,21 @@
 <div class="contact">
   <div class="headline flexCenter">
-    <p class="size90 weight700">Contact</p>
+    <p class="size90 weight700">
+      {{ contact[0].sec[languageService.currentLanguage] }}
+    </p>
   </div>
   <div class="contactContainer">
     <div class="contactText">
-      <p class="size32 weight700">Got a problem to solve?</p>
-      <p class="size16">
-        I'm excited to collaborate and contribute to meaningful projects. If
-        you're looking for a dedicated developer ready to add value to your
-        team, let's connect!
+      <p class="size32 weight700">
+        {{ contact[0].header[languageService.currentLanguage] }}
       </p>
-      <p class="size16">Need a developer? <b>Contact Me!</b></p>
+      <p class="size16">
+        {{ contact[0].subhead[languageService.currentLanguage] }}
+      </p>
+      <p class="size16">
+        {{ contact[0].desc1[languageService.currentLanguage] }}
+        <b>{{ contact[0].desc2[languageService.currentLanguage] }}</b>
+      </p>
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <div>
@@ -21,7 +26,7 @@
           type="text"
           id="name"
           name="personName"
-          placeholder="Your name"
+          placeholder="{{ contact[0].name[languageService.currentLanguage] }}"
           required
           [class.invalid]="!name.valid && name.touched"
         />
@@ -35,7 +40,7 @@
           type="email"
           id="email"
           name="email"
-          placeholder="Your email"
+          placeholder="{{ contact[0].email[languageService.currentLanguage] }}"
           required
           pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
           [class.invalid]="!email.valid && email.touched"
@@ -50,7 +55,7 @@
           [(ngModel)]="contactData.message"
           id="subject"
           name="subject"
-          placeholder="Your message"
+          placeholder="{{ contact[0].msg[languageService.currentLanguage] }}"
           required
           style="height: 200px"
           [class.invalid]="!message.valid && message.touched"
@@ -61,12 +66,13 @@
       <div class="privacyPolicyAccept">
         <input type="checkbox" />
         <p class="size14">
-          I've read the privacy policy and agree to the processing of my data as
-          outlined.
+          {{ contact[0].priv[languageService.currentLanguage] }}
         </p>
       </div>
       <div class="flexCenter">
-        <app-submit-button buttonText="Send message!"></app-submit-button>
+        <app-submit-button
+          buttonText="{{ contact[0].send[languageService.currentLanguage] }}"
+        ></app-submit-button>
       </div>
     </form>
   </div>

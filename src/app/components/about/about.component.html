@@ -1,0 +1,33 @@
+<div class="about">
+  <div class="aboutContainer flexSpaceBetween">
+    <div class="aboutText">
+      <p class="size90 weight700">
+        {{ about[0].head[languageService.currentLanguage] }}
+      </p>
+      <div class="textDetails size16">
+        <p>{{ about[0].desc[languageService.currentLanguage] }}</p>
+        <div class="textComp flexRight">
+          <img src="../../../assets/img/icons/11.Location.svg" alt="Location" />
+          <p>{{ about[0].loc[languageService.currentLanguage] }}</p>
+        </div>
+        <div class="textComp flexRight">
+          <img
+            src="../../../assets/img/icons/12. bulb desktop.svg"
+            alt="Learning"
+          />
+          <p>{{ about[0].learn[languageService.currentLanguage] }}</p>
+        </div>
+        <div class="textComp flexRight">
+          <img
+            src="../../../assets/img/icons/13. puzzle desktop.svg"
+            alt="Solution"
+          />
+          <p>{{ about[0].solve[languageService.currentLanguage] }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="aboutImage">
+      <img src="../../../assets/img/Profile/profile.png" alt="Profile" />
+    </div>
+  </div>
+</div>

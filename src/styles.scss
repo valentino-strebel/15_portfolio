@@ -31,6 +31,12 @@ html {
   align-items: center;
 }
 
+.flexRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .flexReverse {
   flex-direction: row-reverse;
 }

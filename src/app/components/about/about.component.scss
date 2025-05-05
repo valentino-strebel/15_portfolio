@@ -1,0 +1,40 @@
+@import "../../variables";
+
+.about {
+  padding: $screenPadding;
+}
+
+.aboutContainer {
+  max-width: 1440px;
+  margin: auto;
+}
+
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  width: 471px;
+  gap: 40px;
+}
+.textDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.textComp {
+  gap: 16px;
+  display: flex;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.aboutImage {
+  img {
+    width: 453px;
+    height: 453px;
+    border: 4px solid $hoverFocus;
+    border-radius: 100%;
+  }
+}
