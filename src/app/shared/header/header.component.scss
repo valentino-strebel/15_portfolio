@@ -18,12 +18,13 @@ header {
     &:hover {
       color: $hoverFocus;
     }
-    &:focus {
-      color: $hoverFocus;
-      text-decoration: underline;
-      text-decoration-color: $activeClick;
-    }
   }
+}
+
+.activeSel {
+  color: $hoverFocus;
+  text-decoration: underline;
+  text-decoration-color: $activeClick;
 }
 
 button {

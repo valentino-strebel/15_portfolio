@@ -3,6 +3,7 @@ import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { LanguageService } from '../language.service';
 import { ScrollService } from '../scroll.service';
 import { CommonModule } from '@angular/common';
+type Section = 'about' | 'skill' | 'port' | 'contact' | null;
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,12 @@ export class HeaderComponent {
     public languageService: LanguageService,
     public scrollService: ScrollService
   ) {}
+
+  currentSelection: Section = null;
+
+  selectionChange(comp: Section) {
+    this.currentSelection = comp;
+  }
 
   headerBtn = [
     {
