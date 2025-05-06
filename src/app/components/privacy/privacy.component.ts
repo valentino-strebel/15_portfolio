@@ -6,7 +6,7 @@ import { LanguageService } from '../../shared/language.service';
   standalone: true,
   imports: [],
   templateUrl: './privacy.component.html',
-  styleUrl: './privacy.component.scss',
+  styleUrls: ['./privacy.component.scss'],
 })
 export class PrivacyComponent {
   constructor(public languageService: LanguageService) {}

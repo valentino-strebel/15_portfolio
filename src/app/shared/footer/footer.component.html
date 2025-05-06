@@ -4,7 +4,11 @@
       <div class="logoButton" (click)="scrollService.scrollToTop()">
         <app-company-logo></app-company-logo>
       </div>
-      <a routerLink="/privacy-policy">Privacy Policy</a>
+      <div class="privacy">
+        <a [routerLink]="'/privacy-policy'" routerLinkActive="active"
+          >Privacy Policy</a
+        >
+      </div>
     </div>
     <div class="copyright">
       <p class="size23">&#169; Strebel Company 2025</p>
