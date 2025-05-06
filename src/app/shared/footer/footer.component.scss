@@ -29,5 +29,16 @@ footer {
 .privacy {
   a {
     cursor: pointer;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline solid $hoverFocus 2px;
+      text-underline-offset: 4px;
+    }
   }
+}
+
+.nameLegalNotice {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }

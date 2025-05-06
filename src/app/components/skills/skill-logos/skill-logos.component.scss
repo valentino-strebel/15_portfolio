@@ -10,3 +10,12 @@
   height: 404 px;
   gap: 88px;
 }
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  width: 88px;
+}

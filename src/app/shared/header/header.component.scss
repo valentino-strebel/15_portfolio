@@ -23,8 +23,8 @@ header {
 
 .activeSel {
   color: $hoverFocus;
-  text-decoration: underline;
-  text-decoration-color: $activeClick;
+  text-decoration: underline solid $activeClick 4px;
+  text-underline-offset: 12px;
 }
 
 button {
