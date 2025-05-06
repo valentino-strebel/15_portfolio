@@ -5,7 +5,12 @@
         <app-company-logo></app-company-logo>
       </div>
       <div class="privacy">
-        <a [routerLink]="'/privacy-policy'" routerLinkActive="active"
+        <a
+          [routerLink]="'/privacy-policy'"
+          routerLinkActive="active"
+          (click)="
+            displayService.pageChange('privacy'); scrollService.scrollToTop()
+          "
           >Privacy Policy</a
         >
       </div>

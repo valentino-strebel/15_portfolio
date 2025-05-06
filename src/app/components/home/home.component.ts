@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../shared/header/header.component';
-import { FooterComponent } from '../../shared/footer/footer.component';
 import { SkillsComponent } from '../skills/skills.component';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 import { ContactformComponent } from '../contactform/contactform.component';
@@ -12,8 +10,6 @@ import { IntroductionComponent } from '../introduction/introduction.component';
   selector: 'app-home',
   standalone: true,
   imports: [
-    HeaderComponent,
-    FooterComponent,
     SkillsComponent,
     PortfolioComponent,
     ContactformComponent,

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { ScrollService } from '../scroll.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { DisplayService } from '../display.service';
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,8 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  constructor(public scrollService: ScrollService) {}
+  constructor(
+    public scrollService: ScrollService,
+    public displayService: DisplayService
+  ) {}
 }

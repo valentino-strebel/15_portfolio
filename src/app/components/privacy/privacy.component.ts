@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
 
 @Component({
@@ -8,7 +8,10 @@ import { LanguageService } from '../../shared/language.service';
   templateUrl: './privacy.component.html',
   styleUrls: ['./privacy.component.scss'],
 })
-export class PrivacyComponent {
+export class PrivacyComponent implements OnInit {
+  ngOnInit() {
+    window.scrollTo({ top: 0 });
+  }
   constructor(public languageService: LanguageService) {}
 
   privacy = [

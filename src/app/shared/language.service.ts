@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+type Language = 'de' | 'en';
 
 @Injectable({
   providedIn: 'root',
@@ -6,11 +7,7 @@ import { Injectable } from '@angular/core';
 export class LanguageService {
   currentLanguage: 'en' | 'de' = 'en';
 
-  langEn() {
-    this.currentLanguage = 'en';
-  }
-
-  langDe() {
-    this.currentLanguage = 'de';
+  langChange(language: Language) {
+    this.currentLanguage = language;
   }
 }

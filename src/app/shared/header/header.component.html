@@ -1,12 +1,18 @@
 <header>
   <div class="headerContainer flexSpaceBetween">
-    <a href="" class="logoButton"><app-company-logo></app-company-logo></a>
+    <a
+      [routerLink]="'/'"
+      class="logoButton"
+      (click)="displayService.pageChange('home'); scrollService.scrollToTop()"
+      ><app-company-logo></app-company-logo
+    ></a>
     <div class="headerMenu flexSpaceBetween gap92">
       <nav class="pageNavigationButtons flexSpaceBetween gap29">
         <button
           (click)="scrollService.scrollTo('about'); selectionChange('about')"
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'about' }"
+          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].about[languageService.currentLanguage] }}
         </button>
@@ -14,6 +20,7 @@
           (click)="scrollService.scrollTo('skills'); selectionChange('skill')"
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'skill' }"
+          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].skill[languageService.currentLanguage] }}
         </button>
@@ -21,6 +28,7 @@
           (click)="scrollService.scrollTo('portfolio'); selectionChange('port')"
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'port' }"
+          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].port[languageService.currentLanguage] }}
         </button>
@@ -30,6 +38,7 @@
           "
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'contact' }"
+          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].contact[languageService.currentLanguage] }}
         </button>
@@ -37,7 +46,7 @@
       <div class="languageButtons flexSpaceBetween gap14">
         <button
           [id]="'btnGer'"
-          (click)="languageService.langDe()"
+          (click)="languageService.langChange('de')"
           class="size18"
           [ngClass]="{ activeLang: languageService.currentLanguage === 'de' }"
         >
@@ -45,7 +54,7 @@
         </button>
         <button
           [id]="'btnEng'"
-          (click)="languageService.langEn()"
+          (click)="languageService.langChange('en')"
           class="size18"
           [ngClass]="{ activeLang: languageService.currentLanguage === 'en' }"
         >
