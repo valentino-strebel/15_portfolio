@@ -23,9 +23,20 @@ export class HeaderComponent {
 
   currentSelection: Section = null;
 
+  currentImage: number = 0;
+
+  interval: any;
+
   selectionChange(comp: Section) {
     this.currentSelection = comp;
   }
+
+  images: string[] = [
+    '../../../assets/img/icons/burger/burger1.svg',
+    '../../../assets/img/icons/burger/burger2.svg',
+    '../../../assets/img/icons/burger/burger3.svg',
+    '../../../assets/img/icons/burger/burger4.svg',
+  ];
 
   headerBtn = [
     {
@@ -35,4 +46,16 @@ export class HeaderComponent {
       contact: { en: 'Contact', de: 'Kontakt' },
     },
   ];
+
+  nextImage() {
+    if (this.interval) return; //
+    this.interval = setInterval(() => {
+      if (this.currentImage < this.images.length - 1) {
+        this.currentImage++;
+      } else {
+        clearInterval(this.interval);
+        this.interval = null;
+      }
+    }, 80);
+  }
 }

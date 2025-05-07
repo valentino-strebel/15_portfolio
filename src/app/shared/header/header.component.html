@@ -1,5 +1,8 @@
 <header>
   <div class="headerContainer flexSpaceBetween">
+    <div class="burgerMenu" (click)="nextImage()">
+      <img [src]="images[currentImage]" alt="Image" width="300" />
+    </div>
     <a
       [routerLink]="'/'"
       class="logoButton"

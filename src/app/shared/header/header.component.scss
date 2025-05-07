@@ -11,6 +11,18 @@ header {
   padding: 37px 100px;
   max-width: 1440px;
   margin: auto;
+  position: relative;
+}
+
+.burgerMenu {
+  position: absolute;
+  background-color: transparent;
+  img {
+    height: 28px;
+    background-color: transparent;
+  }
+  top: 45px;
+  right: 0;
 }
 
 .pageNavigationButtons {
