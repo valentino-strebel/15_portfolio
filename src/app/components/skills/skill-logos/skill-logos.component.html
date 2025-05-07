@@ -1,6 +1,12 @@
 <div class="skillsList">
-  <div *ngFor="let skill of skills" class="skillItem">
-    <img [src]="skill.image" alt="{{ skill.text }}" />
+  <div *ngFor="let skill of skills; let i = index" class="skillItem">
+    <img
+      [src]="skill.image"
+      alt="{{ skill.text }}"
+      class="object"
+      [class.moved]="movedIndex === i"
+      (mouseenter)="onMouseEnter(i)"
+    />
     <p class="weight700 size16">{{ skill.text }}</p>
   </div>
 </div>

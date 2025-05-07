@@ -19,3 +19,14 @@
   gap: 10px;
   width: 88px;
 }
+
+.object {
+  transition: transform 0.3s ease;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.object.moved {
+  transform: translateY(-16px);
+}

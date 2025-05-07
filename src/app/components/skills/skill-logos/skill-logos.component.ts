@@ -9,6 +9,17 @@ import { Component } from '@angular/core';
   styleUrl: './skill-logos.component.scss',
 })
 export class SkillLogosComponent {
+  movedIndex: number | null = null;
+
+  onMouseEnter(index: number) {
+    this.movedIndex = index;
+    setTimeout(() => {
+      if (this.movedIndex === index) {
+        this.movedIndex = null;
+      }
+    }, 700);
+  }
+
   skills = [
     {
       image: '../../assets/img/icons/icon_plain/front/html_plain.svg',
