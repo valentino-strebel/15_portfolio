@@ -6,10 +6,18 @@ footer {
 }
 
 .footerContainer {
-  height: 291px;
   max-width: 1440px;
   margin: auto;
-  padding: 0 100px;
+  padding: 100px 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.footerMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .footerButtons {
@@ -41,4 +49,18 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .footerContainer {
+    padding: 64px 25px;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footerMain {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
 }

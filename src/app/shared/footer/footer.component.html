@@ -1,39 +1,43 @@
 <footer>
-  <div class="footerContainer flexSpaceBetween">
-    <div class="nameLegalNotice">
-      <div class="logoButton" (click)="scrollService.scrollToTop()">
-        <app-company-logo></app-company-logo>
+  <div class="footerContainer">
+    <div class="footerMain">
+      <div class="nameLegalNotice">
+        <div class="logoButton" (click)="scrollService.scrollToTop()">
+          <app-company-logo></app-company-logo>
+        </div>
       </div>
-      <div class="privacy">
+      <div class="copyright">
+        <p class="size23">&#169; Strebel Company 2025</p>
+      </div>
+      <div class="footerButtons flexSpaceBetween gap29">
+        <a href="https://github.com/vale-cannelloni" target="_blank"
+          ><img
+            src="../../../assets/img/icons/8. Github button.svg"
+            alt="GitHub Link"
+        /></a>
+        <a href="mailto:office@strebel-company.de" target="_blank"
+          ><img
+            src="../../../assets/img/icons/9. Email button.svg"
+            alt="Email Link"
+        /></a>
         <a
-          [routerLink]="'/privacy-policy'"
-          routerLinkActive="active"
-          (click)="
-            displayService.pageChange('privacy'); scrollService.scrollToTop()
-          "
-          >Privacy Policy</a
-        >
+          href="https://linkedin.com/in/valentino-guido-strebel"
+          target="_blank"
+          ><img
+            src="../../../assets/img/icons/10. Linkedin button.svg"
+            alt="LinkedIn Link"
+        /></a>
       </div>
     </div>
-    <div class="copyright">
-      <p class="size23">&#169; Strebel Company 2025</p>
-    </div>
-    <div class="footerButtons flexSpaceBetween gap29">
-      <a href="https://github.com/vale-cannelloni" target="_blank"
-        ><img
-          src="../../../assets/img/icons/8. Github button.svg"
-          alt="GitHub Link"
-      /></a>
-      <a href="mailto:office@strebel-company.de" target="_blank"
-        ><img
-          src="../../../assets/img/icons/9. Email button.svg"
-          alt="Email Link"
-      /></a>
-      <a href="https://linkedin.com/in/valentino-guido-strebel" target="_blank"
-        ><img
-          src="../../../assets/img/icons/10. Linkedin button.svg"
-          alt="LinkedIn Link"
-      /></a>
+    <div class="privacy">
+      <a
+        [routerLink]="'/privacy-policy'"
+        routerLinkActive="active"
+        (click)="
+          displayService.pageChange('privacy'); scrollService.scrollToTop()
+        "
+        >Privacy Policy</a
+      >
     </div>
   </div>
 </footer>

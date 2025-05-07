@@ -61,9 +61,5 @@ export class SkillLogosComponent {
       image: '../../assets/img/icons/icon_plain/front/scrum_plain.svg',
       text: 'Scrum',
     },
-    {
-      image: '../../assets/img/icons/icon_plain/front/cont_learn_plain.svg',
-      text: 'Continually learning',
-    },
   ];
 }
