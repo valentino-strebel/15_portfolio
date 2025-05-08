@@ -1,17 +1,16 @@
 <div class="portfolio">
   <div class="portfolioContainer">
     <div class="headline">
-      <p class="size90 weight700">Portfolio</p>
+      <p>Portfolio</p>
     </div>
     <div class="portfolioHeader">
       <p class="size16">
         {{ subheader[0].line[languageService.currentLanguage] }}
       </p>
     </div>
-
     <div *ngFor="let project of projects; let i = index">
       <app-port-text
-        [ngClass]="{ 'reverse-layout': i % 2 !== 0 }"
+        [ngClass]="{ 'reverse-layout': isWideScreen && i % 2 !== 0 }"
         [imageUrl]="project.img"
         [projectName]="project.name"
         [projectDesc]="project.desc[languageService.currentLanguage]"

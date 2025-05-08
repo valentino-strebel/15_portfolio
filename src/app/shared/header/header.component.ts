@@ -27,6 +27,8 @@ export class HeaderComponent {
 
   interval: any;
 
+  direction = 1;
+
   selectionChange(comp: Section) {
     this.currentSelection = comp;
   }
@@ -48,13 +50,21 @@ export class HeaderComponent {
   ];
 
   nextImage() {
-    if (this.interval) return; //
+    if (this.interval) return;
+
+    this.direction = this.direction || 1;
+
     this.interval = setInterval(() => {
-      if (this.currentImage < this.images.length - 1) {
+      if (this.direction === 1 && this.currentImage < this.images.length - 1) {
         this.currentImage++;
+        document.body.style.overflow = 'hidden';
+      } else if (this.direction === -1 && this.currentImage > 0) {
+        this.currentImage--;
+        document.body.style.overflow = 'visible';
       } else {
         clearInterval(this.interval);
         this.interval = null;
+        this.direction *= -1;
       }
     }, 80);
   }

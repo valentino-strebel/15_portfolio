@@ -9,10 +9,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  padding: 0 25px;
   &.reverse-layout {
     flex-direction: row-reverse;
     text-align: end;
     align-items: flex-start;
+  }
+  img {
+    width: 100%;
+    max-width: 600px;
   }
 }
 
@@ -61,4 +67,19 @@
   display: flex;
   flex-direction: column;
   gap: 35px;
+}
+
+@media (max-width: 1300px) {
+  .portFullDesc {
+    flex-direction: column;
+  }
+
+  :host(.reverse-layout) .portFullDesc {
+    flex-direction: column;
+    text-align: start;
+  }
+
+  :host(.reverse-layout) .portButtons {
+    justify-content: flex-start;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { PortTextComponent } from './port-text/port-text.component';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../shared/language.service';
@@ -10,8 +10,23 @@ import { LanguageService } from '../../shared/language.service';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   constructor(public languageService: LanguageService) {}
+
+  isWideScreen: boolean = false;
+
+  ngOnInit() {
+    this.checkScreenWidth();
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.checkScreenWidth();
+  }
+
+  private checkScreenWidth() {
+    this.isWideScreen = window.innerWidth >= 1100;
+  }
   subheader = [
     {
       line: {

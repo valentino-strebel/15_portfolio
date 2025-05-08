@@ -2,13 +2,13 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: $standardBlue;
 }
 
 * {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  background-color: $standardBlue;
 }
 
 .purpleColor {

@@ -9,6 +9,11 @@
   margin: auto;
 }
 
+.headline p {
+  font-size: 90px;
+  font-weight: 700;
+}
+
 .portfolioHeader {
   display: flex;
   flex-direction: column;
@@ -16,35 +21,10 @@
   gap: 40px;
 }
 
-.headline {
-  max-width: 1440px;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .headline p {
   display: flex;
   align-items: center;
-}
-
-.headline p::before,
-.headline p::after {
-  content: "";
-  display: block;
-  height: 4px;
-  background-color: $activeClick;
-}
-.headline p::after {
-  flex-grow: 1;
-  margin-left: 32px;
-}
-
-.headline p::before {
-  width: 100px;
-  margin-right: 32px;
-  flex-shrink: 0;
+  justify-content: center;
 }
 
 .portDesc {
@@ -73,4 +53,14 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+  .portfolio {
+    padding: 100px 25px;
+  }
+
+  .headline p {
+    font-size: 45px;
+  }
 }

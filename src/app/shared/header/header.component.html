@@ -9,8 +9,8 @@
       (click)="displayService.pageChange('home'); scrollService.scrollToTop()"
       ><app-company-logo></app-company-logo
     ></a>
-    <div class="headerMenu flexSpaceBetween gap92">
-      <nav class="pageNavigationButtons flexSpaceBetween gap29">
+    <div class="headerMenu hideMenu" [ngClass]="{ hideMenu: direction === -1 }">
+      <nav class="pageNavigationButtons flexSpaceBetween">
         <button
           (click)="scrollService.scrollTo('about'); selectionChange('about')"
           class="size23"
@@ -46,7 +46,7 @@
           {{ headerBtn[0].contact[languageService.currentLanguage] }}
         </button>
       </nav>
-      <div class="languageButtons flexSpaceBetween gap14">
+      <div class="languageButtons">
         <button
           [id]="'btnGer'"
           (click)="languageService.langChange('de')"
