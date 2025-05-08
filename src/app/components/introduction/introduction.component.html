@@ -7,12 +7,14 @@
         alt="Profile"
       />
       <div class="introText gap35">
-        <div class="gap35 flexCenter">
-          <p class="rotate size64">
-            {{ intro[0].first[languageService.currentLanguage] }}
-          </p>
+        <div class="introDesc flexCenter">
+          <div class="rotate">
+            <p>
+              {{ intro[0].first[languageService.currentLanguage] }}
+            </p>
+          </div>
           <div>
-            <p class="weight700 size90">{{ intro[0].second }}</p>
+            <p class="name">{{ intro[0].second }}</p>
             <p class="profession">
               {{ intro[0].third[languageService.currentLanguage] }}
             </p>

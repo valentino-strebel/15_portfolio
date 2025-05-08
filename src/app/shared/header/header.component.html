@@ -9,7 +9,7 @@
       (click)="displayService.pageChange('home'); scrollService.scrollToTop()"
       ><app-company-logo></app-company-logo
     ></a>
-    <div class="headerMenu hideMenu" [ngClass]="{ hideMenu: direction === -1 }">
+    <div class="headerMenu" [ngClass]="{ hideMenu: direction === -1 }">
       <nav class="pageNavigationButtons flexSpaceBetween">
         <button
           (click)="scrollService.scrollTo('about'); selectionChange('about')"
