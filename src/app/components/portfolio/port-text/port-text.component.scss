@@ -82,4 +82,11 @@
   :host(.reverse-layout) .portButtons {
     justify-content: flex-start;
   }
+  .portButtons {
+    gap: 24px;
+    a {
+      padding: 10px 10px;
+      font-size: 16px;
+    }
+  }
 }

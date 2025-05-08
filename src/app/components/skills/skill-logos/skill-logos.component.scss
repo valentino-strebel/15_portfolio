@@ -9,14 +9,13 @@
   display: flex;
   flex-wrap: wrap;
   width: 664px;
-  height: 404 px;
   gap: 88px;
 }
 
 .skillItem {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 10px;
   width: 88px;
@@ -83,4 +82,32 @@
 .purpleImage p {
   transition: color 0.5s ease-in-out;
   color: $activeClick;
+}
+
+.skillText {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+@media (max-width: 1300px) {
+  .skillsList {
+    gap: 44px;
+    width: auto;
+    max-width: 646px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .skillText {
+    font-size: 14px;
+  }
+
+  .skillItem {
+    width: 44px;
+  }
+
+  .purpleImage img {
+    width: 44px;
+    height: 44px;
+  }
 }

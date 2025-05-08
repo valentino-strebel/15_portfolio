@@ -2,4 +2,32 @@
   display: flex;
   flex-direction: column;
   text-align: end;
+  gap: 24px;
+}
+
+.headline {
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.purpleLine {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+@media (max-width: 1300px) {
+  .skillDescription {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .headline {
+    font-size: 45px;
+    font-weight: 700;
+  }
+  .purpleLine {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }

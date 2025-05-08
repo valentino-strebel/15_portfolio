@@ -50,6 +50,7 @@
 .company {
   display: flex;
   align-items: center;
+  font-size: 18px;
 }
 
 .company::before {
@@ -101,4 +102,37 @@
 
 .referenceActive {
   color: $activeClick;
+}
+
+.referenceTextcontent {
+  font-weight: 20px;
+}
+
+@media (max-width: 1100px) {
+  .referenceContainer {
+    display: flex;
+    gap: 32px;
+    flex-direction: column-reverse;
+  }
+
+  .referenceText {
+    padding: 16px;
+  }
+
+  .referenceTextcontent {
+    font-size: 16px;
+  }
+
+  .company {
+    font-size: 16px;
+  }
+
+  .reference {
+    padding: 0 25px;
+  }
+
+  .imageContainer {
+    width: 144px;
+    height: 144px;
+  }
 }
