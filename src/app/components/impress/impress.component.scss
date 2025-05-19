@@ -1,13 +1,22 @@
 @import "../../variables";
 
-.privacy {
+.impress {
   padding: $screenPadding;
 }
 
-.privacyContainer {
+.impressContainer {
   max-width: 1440px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .impress {
+    padding: 100px 25px;
+  }
 }

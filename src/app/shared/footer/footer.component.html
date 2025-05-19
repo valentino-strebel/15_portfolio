@@ -39,5 +39,15 @@
         >Privacy Policy</a
       >
     </div>
+    <div class="privacy">
+      <a
+        [routerLink]="'/impress'"
+        routerLinkActive="active"
+        (click)="
+          displayService.pageChange('impress'); scrollService.scrollToTop()
+        "
+        >Impressum</a
+      >
+    </div>
   </div>
 </footer>

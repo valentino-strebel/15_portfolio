@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   width: 664px;
   gap: 88px;
+  justify-content: center;
 }
 
 .skillItem {
@@ -46,10 +47,10 @@
 
 .purpleImage {
   position: absolute;
-  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   overflow: hidden;
+  top: 0;
 }
 
 .hover-image {
@@ -71,8 +72,6 @@
 
 .purpleImage img {
   transition: opacity 0.5s ease-in-out;
-  width: 88px;
-  height: 88px;
 }
 
 .purpleImage:hover p {
@@ -103,11 +102,6 @@
   }
 
   .skillItem {
-    width: 44px;
-  }
-
-  .purpleImage img {
-    width: 44px;
-    height: 44px;
+    width: 88px;
   }
 }

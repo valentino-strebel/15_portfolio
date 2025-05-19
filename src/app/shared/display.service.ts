@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-type Change = 'home' | 'privacy';
+type Change = 'home' | 'privacy' | 'impress';
 
 @Injectable({
   providedIn: 'root',

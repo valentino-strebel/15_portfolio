@@ -11,3 +11,9 @@
   flex-direction: column;
   gap: 24px;
 }
+
+@media (max-width: 900px) {
+  .privacy {
+    padding: 100px 25px;
+  }
+}
