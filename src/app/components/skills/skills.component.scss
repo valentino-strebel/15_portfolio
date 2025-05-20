@@ -9,10 +9,9 @@
   justify-content: space-between;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
   .skillsContainer {
     flex-direction: column;
-    gap: 120px;
   }
 }
 

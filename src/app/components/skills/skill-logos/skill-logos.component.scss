@@ -26,7 +26,6 @@
   transition: transform 0.3s ease;
   display: inline-block;
   position: relative;
-  cursor: pointer;
 }
 
 .object.moved {
@@ -68,6 +67,7 @@
   text-align: center;
   gap: 10px;
   width: 88px;
+  margin-bottom: 120px;
 }
 
 .purpleImage img {

@@ -21,7 +21,7 @@ export class IntroductionComponent {
     {
       first: { en: 'I am', de: 'Ich bin' },
       second: 'Valentino Strebel',
-      third: { en: 'Software Developer', de: 'Softwareentwickler' },
+      third: { en: 'Software Developer', de: 'Software Entwickler' },
       button: { en: "Let's talk", de: 'Schreiben Sie uns' },
       mail: 'office@strebel-company.de',
     },

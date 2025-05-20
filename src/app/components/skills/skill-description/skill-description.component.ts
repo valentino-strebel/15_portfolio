@@ -21,7 +21,7 @@ export class SkillDescriptionComponent {
     {
       headline: {
         en: 'My Skills',
-        de: 'Meine Qualifikationen',
+        de: 'Meine Skills',
       },
       desc: {
         en: 'I build modern, responsive web apps using HTML, CSS, JavaScript, and TypeScript. With Angular, Firebase, and REST APIs, I create dynamic, full-stack solutions. I follow Scrum methods and apply Material Design principles to deliver clean, user-focused experiences.',

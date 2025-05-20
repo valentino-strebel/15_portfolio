@@ -182,7 +182,7 @@ a {
 
 @media (max-width: 900px) {
   .contact {
-    padding: 100px 25px;
+    padding: $mobilePadding;
   }
 
   .headline p {

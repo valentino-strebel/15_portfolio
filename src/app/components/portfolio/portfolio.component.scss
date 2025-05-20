@@ -1,7 +1,7 @@
 @import "../../variables";
 
 .portfolio {
-  padding: 100px 136px;
+  padding: $screenPadding;
 }
 
 .portfolioContainer {
@@ -57,7 +57,7 @@
 
 @media (max-width: 900px) {
   .portfolio {
-    padding: 100px 25px;
+    padding: $mobilePadding;
   }
 
   .headline p {
