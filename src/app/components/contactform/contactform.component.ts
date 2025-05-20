@@ -85,7 +85,7 @@ export class ContactformComponent {
   mailTest = false;
 
   post = {
-    endPoint: 'https://strebel-company.de/sendMail.php',
+    endPoint: 'https://www.strebel-company.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
