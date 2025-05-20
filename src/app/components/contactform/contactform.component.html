@@ -109,7 +109,10 @@
         <div class="height23"></div>
         }
       </div>
-      <div class="flexCenter">
+      <p [ngClass]="{ confirm: true, 'confirm-active': isConfirmed }">
+        {{ confirm[0].ok[languageService.currentLanguage] }}
+      </p>
+      <div class="flexCenter sendButton">
         <app-submit-button
           buttonText="{{ contact[0].send[languageService.currentLanguage] }}"
         ></app-submit-button>

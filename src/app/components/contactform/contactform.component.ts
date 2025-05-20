@@ -6,11 +6,18 @@ import { LanguageService } from '../../shared/language.service';
 import { ScrollService } from '../../shared/scroll.service';
 import { DisplayService } from '../../shared/display.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, SubmitButtonComponent, RouterLink, RouterLinkActive],
+  imports: [
+    FormsModule,
+    SubmitButtonComponent,
+    RouterLink,
+    RouterLinkActive,
+    CommonModule,
+  ],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
@@ -75,6 +82,24 @@ export class ContactformComponent {
     },
   ];
 
+  isConfirmed = false;
+
+  toggleConfirm() {
+    this.isConfirmed = true;
+    setTimeout(() => {
+      this.isConfirmed = false;
+    }, 3000);
+  }
+
+  confirm = [
+    {
+      ok: {
+        de: 'Vielen Dank! Wir haben Ihre Nachricht erhalten!',
+        en: 'Thank you! We have received your message!',
+      },
+    },
+  ];
+
   contactData = {
     name: '',
     email: '',
@@ -114,6 +139,7 @@ export class ContactformComponent {
           },
           complete: () => console.info('send post complete'),
         });
+      this.toggleConfirm();
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
     } else {
