@@ -78,7 +78,14 @@
           }
         </div>
         <div class="privacyPolicyAccept">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            id="privacyCheck"
+            name="privacyCheck"
+            [(ngModel)]="contactData.privacyAccepted"
+            #check="ngModel"
+            required
+          />
           <p class="size14">
             {{ contact[0].priv1[languageService.currentLanguage] }}
           </p>
@@ -94,6 +101,13 @@
             {{ contact[0].priv2[languageService.currentLanguage] }}
           </p>
         </div>
+        @if(!check.valid && check.touched) {
+        <span>{{
+          error[0].privacyError[languageService.currentLanguage]
+        }}</span>
+        } @else {
+        <div class="height23"></div>
+        }
       </div>
       <div class="flexCenter">
         <app-submit-button

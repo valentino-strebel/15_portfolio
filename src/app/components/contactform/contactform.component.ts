@@ -68,6 +68,10 @@ export class ContactformComponent {
         de: 'Bitte geben Sie eine Nachricht ein',
         en: 'Please enter a message',
       },
+      privacyError: {
+        de: 'Bitte akzeptieren Sie unsere Datenschutzerklärung',
+        en: 'Please accept our privacy policy',
+      },
     },
   ];
 
@@ -75,9 +79,10 @@ export class ContactformComponent {
     name: '',
     email: '',
     message: '',
+    privacyAccepted: false,
   };
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://strebel-company.de/sendMail.php',
@@ -101,6 +106,7 @@ export class ContactformComponent {
               name: '',
               email: '',
               message: '',
+              privacyAccepted: false,
             };
           },
           error: (error) => {
@@ -110,6 +116,10 @@ export class ContactformComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
+    } else {
+      Object.values(ngForm.controls).forEach((control) => {
+        control.markAsTouched();
+      });
     }
   }
 }
