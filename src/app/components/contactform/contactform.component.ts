@@ -49,15 +49,15 @@ export class ContactformComponent {
       email: { de: 'Ihre Email', en: 'Your email' },
       msg: { de: 'Ihre Nachricht', en: 'Your message' },
       priv1: {
-        de: 'Ich habe die',
-        en: 'I have read the',
+        de: 'Ich habe die ',
+        en: 'I have read the ',
       },
       priv2: {
-        de: 'gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.',
-        en: 'and agree to the processing of my data as outlined',
+        de: ' gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.',
+        en: ' and agree to the processing of my data as outlined',
       },
       send: { de: 'Nachricht senden!', en: 'Send message!' },
-      link: { de: 'Datenschutzrichtlinie', en: 'privacy policy' },
+      link: { de: ' Datenschutzrichtlinie ', en: ' privacy policy ' },
     },
   ];
 

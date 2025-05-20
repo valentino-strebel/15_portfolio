@@ -3,7 +3,6 @@
 
 .contact {
   padding: $screenPadding;
-  overflow: hidden;
 }
 
 .confirm {
@@ -21,6 +20,7 @@
   max-width: 1440px;
   margin: auto;
   gap: 25px;
+  overflow: hidden;
 }
 
 input[type="text"],
@@ -161,6 +161,12 @@ span {
 
 .height23 {
   height: 32px;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 a {

@@ -86,20 +86,22 @@
             #check="ngModel"
             required
           />
-          <p class="size14">
-            {{ contact[0].priv1[languageService.currentLanguage] }}
-          </p>
-          <a
-            class="size14"
-            [routerLink]="'/privacy-policy'"
-            routerLinkActive="active"
-            (click)="displayService.pageChange('privacy')"
-          >
-            {{ contact[0].link[languageService.currentLanguage] }}</a
-          >
-          <p class="size14">
-            {{ contact[0].priv2[languageService.currentLanguage] }}
-          </p>
+          <div class="wrap">
+            <p class="size14">
+              {{ contact[0].priv1[languageService.currentLanguage] }}
+            </p>
+            <a
+              class="size14"
+              [routerLink]="'/privacy-policy'"
+              routerLinkActive="active"
+              (click)="displayService.pageChange('privacy')"
+            >
+              {{ contact[0].link[languageService.currentLanguage] }}</a
+            >
+            <p class="size14">
+              {{ contact[0].priv2[languageService.currentLanguage] }}
+            </p>
+          </div>
         </div>
         @if(!check.valid && check.touched) {
         <span>{{
