@@ -18,56 +18,82 @@
       </p>
     </div>
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <div>
-        <input
-          #name="ngModel"
-          minlength="4"
-          [(ngModel)]="contactData.name"
-          type="text"
-          id="name"
-          name="personName"
-          placeholder="{{ contact[0].name[languageService.currentLanguage] }}"
-          required
-          [class.invalid]="!name.valid && name.touched"
-        />
-        @if(!name.valid && name.touched) {
-        <span>Your name is required</span>}
-      </div>
-      <div>
-        <input
-          #email="ngModel"
-          [(ngModel)]="contactData.email"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="{{ contact[0].email[languageService.currentLanguage] }}"
-          required
-          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-          [class.invalid]="!email.valid && email.touched"
-        />
-        @if(!email.valid && email.touched) {
-        <span>Please enter a valid email</span>}
-      </div>
-      <div>
-        <textarea
-          #message="ngModel"
-          minlength="4"
-          [(ngModel)]="contactData.message"
-          id="subject"
-          name="subject"
-          placeholder="{{ contact[0].msg[languageService.currentLanguage] }}"
-          required
-          style="height: 200px"
-          [class.invalid]="!message.valid && message.touched"
-        ></textarea>
-        @if(!message.valid && message.touched) {
-        <span>Please enter a message</span>}
-      </div>
-      <div class="privacyPolicyAccept">
-        <input type="checkbox" />
-        <p class="size14">
-          {{ contact[0].priv[languageService.currentLanguage] }}
-        </p>
+      <div class="formContent">
+        <div>
+          <input
+            #name="ngModel"
+            minlength="4"
+            [(ngModel)]="contactData.name"
+            type="text"
+            id="name"
+            name="personName"
+            placeholder="{{ contact[0].name[languageService.currentLanguage] }}"
+            required
+            [class.invalid]="!name.valid && name.touched"
+          />
+          @if(!name.valid && name.touched) {
+          <span>{{ error[0].nameError[languageService.currentLanguage] }}</span
+          >}@else {
+          <div class="height23"></div>
+          }
+        </div>
+        <div>
+          <input
+            #email="ngModel"
+            [(ngModel)]="contactData.email"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="{{
+              contact[0].email[languageService.currentLanguage]
+            }}"
+            required
+            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            [class.invalid]="!email.valid && email.touched"
+          />
+          @if(!email.valid && email.touched) {
+          <span>{{ error[0].emailError[languageService.currentLanguage] }}</span
+          >}@else {
+          <div class="height23"></div>
+          }
+        </div>
+        <div>
+          <textarea
+            #message="ngModel"
+            minlength="4"
+            [(ngModel)]="contactData.message"
+            id="subject"
+            name="subject"
+            placeholder="{{ contact[0].msg[languageService.currentLanguage] }}"
+            required
+            style="height: 200px"
+            [class.invalid]="!message.valid && message.touched"
+          ></textarea>
+          @if(!message.valid && message.touched) {
+          <span>{{
+            error[0].commentError[languageService.currentLanguage]
+          }}</span
+          >} @else {
+          <div class="height23"></div>
+          }
+        </div>
+        <div class="privacyPolicyAccept">
+          <input type="checkbox" />
+          <p class="size14">
+            {{ contact[0].priv1[languageService.currentLanguage] }}
+          </p>
+          <a
+            class="size14"
+            [routerLink]="'/privacy-policy'"
+            routerLinkActive="active"
+            (click)="displayService.pageChange('privacy')"
+          >
+            {{ contact[0].link[languageService.currentLanguage] }}</a
+          >
+          <p class="size14">
+            {{ contact[0].priv2[languageService.currentLanguage] }}
+          </p>
+        </div>
       </div>
       <div class="flexCenter">
         <app-submit-button

@@ -4,18 +4,21 @@ import { SubmitButtonComponent } from '../../shared/submit-button/submit-button.
 import { HttpClient } from '@angular/common/http';
 import { LanguageService } from '../../shared/language.service';
 import { ScrollService } from '../../shared/scroll.service';
+import { DisplayService } from '../../shared/display.service';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, SubmitButtonComponent],
+  imports: [FormsModule, SubmitButtonComponent, RouterLink, RouterLinkActive],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
 export class ContactformComponent {
   constructor(
     public languageService: LanguageService,
-    public scrollService: ScrollService
+    public scrollService: ScrollService,
+    public displayService: DisplayService
   ) {}
   http = inject(HttpClient);
 
@@ -38,11 +41,33 @@ export class ContactformComponent {
       name: { de: 'Ihr Name', en: 'Your name' },
       email: { de: 'Ihre Email', en: 'Your email' },
       msg: { de: 'Ihre Nachricht', en: 'Your message' },
-      priv: {
-        de: 'Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.',
-        en: 'I have read the privacy policy and agree to the processing of my data as outlined',
+      priv1: {
+        de: 'Ich habe die',
+        en: 'I have read the',
+      },
+      priv2: {
+        de: 'gelesen und stimme der Verarbeitung meiner Daten wie darin beschrieben zu.',
+        en: 'and agree to the processing of my data as outlined',
       },
       send: { de: 'Nachricht senden!', en: 'Send message!' },
+      link: { de: 'Datenschutzrichtlinie', en: 'privacy policy' },
+    },
+  ];
+
+  error = [
+    {
+      nameError: {
+        de: 'Ihr Name ist erforderlich',
+        en: 'Your name is required',
+      },
+      emailError: {
+        de: 'Bitte geben Sie eine gültige E-Mail-Adresse ein',
+        en: 'Please enter a valid email',
+      },
+      commentError: {
+        de: 'Bitte geben Sie eine Nachricht ein',
+        en: 'Please enter a message',
+      },
     },
   ];
 
