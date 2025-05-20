@@ -44,7 +44,7 @@ export class PortfolioComponent implements OnInit {
         de: 'Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag-and-Drop, weise Benutzer und Kategorien zu.',
       },
       tech: 'HTML | CSS | JS | Firebase | Agile',
-      gameUrl: 'url1',
+      gameUrl: 'http://port3.strebel-company.de',
       gitUrl: 'https://github.com/vale-cannelloni/join-415',
     },
     {
@@ -55,7 +55,7 @@ export class PortfolioComponent implements OnInit {
         de: 'Ein einfaches Jump-and-Run-Spiel auf objektorientierter Basis. Hilf Pepe, Münzen und Flaschen mit scharfer Soße zu finden, um gegen das Boss-Huhn zu kämpfen.',
       },
       tech: 'HTML | CSS | JS | Object Oriented',
-      gameUrl: 'url1',
+      gameUrl: 'http://port1.strebel-company.de',
       gitUrl: 'https://github.com/vale-cannelloni/11_pollo_loco',
     },
     {
@@ -66,7 +66,7 @@ export class PortfolioComponent implements OnInit {
         de: 'Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.',
       },
       tech: 'HTML | CSS | JS | API',
-      gameUrl: 'url1',
+      gameUrl: 'http://port2.strebel-company.de',
       gitUrl: 'https://github.com/vale-cannelloni/9_pokedex',
     },
   ];
