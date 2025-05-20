@@ -36,7 +36,7 @@
         (click)="
           displayService.pageChange('privacy'); scrollService.scrollToTop()
         "
-        >Privacy Policy</a
+        >{{ footer[0].data[languageService.currentLanguage] }}</a
       >
     </div>
     <div class="privacy">
@@ -46,7 +46,7 @@
         (click)="
           displayService.pageChange('impress'); scrollService.scrollToTop()
         "
-        >Impressum</a
+        >{{ footer[0].impress[languageService.currentLanguage] }}</a
       >
     </div>
   </div>

@@ -49,6 +49,12 @@ export class HeaderComponent {
     },
   ];
 
+  changeDirection() {
+    if (this.direction === -1) {
+      this.nextImage();
+    }
+  }
+
   nextImage() {
     if (this.interval) return;
 
