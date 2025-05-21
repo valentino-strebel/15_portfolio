@@ -11,9 +11,11 @@
   gap: 48px;
   align-items: center;
   justify-content: space-between;
+  opacity: 1;
 }
 
 .imageContainer {
+  opacity: 1;
   width: 272px;
   height: 272px;
   border-radius: 100%;
@@ -24,7 +26,13 @@
     width: 100%;
     object-fit: contain;
     background-color: white;
+    transition: opacity 0.2s ease-in-out;
   }
+}
+.referenceTextcontent.fade,
+.company.fade,
+.imageContainer img.fade {
+  opacity: 0;
 }
 
 .referenceText {
@@ -48,6 +56,7 @@
 }
 
 .company {
+  transition: opacity 0.2s ease-in-out;
   display: flex;
   align-items: center;
   font-size: 18px;
@@ -71,7 +80,6 @@
   button {
     border-style: none;
     background-color: #141d2f;
-
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -105,6 +113,7 @@
 }
 
 .referenceTextcontent {
+  transition: opacity 0.2s ease-in-out;
   font-weight: 20px;
 }
 

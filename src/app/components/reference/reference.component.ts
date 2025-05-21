@@ -12,6 +12,8 @@ import { LanguageService } from '../../shared/language.service';
 export class ReferenceComponent {
   constructor(public languageService: LanguageService) {}
 
+  fade: boolean = false;
+
   currentIndex: number = 0;
 
   currentSymbol: string = 'symbol-' + this.currentIndex;
@@ -51,27 +53,29 @@ export class ReferenceComponent {
       },
     },
   ];
-
   nextItem(): void {
-    if (this.currentIndex < this.galleryItems.length - 1) {
-      this.currentIndex++;
+    this.triggerFade(() => {
+      this.currentIndex = (this.currentIndex + 1) % this.galleryItems.length;
       this.setCurrentSymbol(this.currentIndex);
-    } else {
-      this.currentIndex = 0;
-      this.setCurrentSymbol(this.currentIndex);
-    }
+    });
   }
 
   prevItem(): void {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
+    this.triggerFade(() => {
+      this.currentIndex =
+        (this.currentIndex - 1 + this.galleryItems.length) %
+        this.galleryItems.length;
       this.setCurrentSymbol(this.currentIndex);
-    } else {
-      this.currentIndex = this.galleryItems.length - 1;
-      this.setCurrentSymbol(this.currentIndex);
-    }
+    });
   }
 
+  triggerFade(callback: () => void): void {
+    this.fade = true;
+    setTimeout(() => {
+      callback();
+      this.fade = false;
+    }, 200);
+  }
   setCurrentSymbol(myI: number) {
     this.currentSymbol = 'symbol-' + myI;
   }

@@ -1,10 +1,10 @@
 <div class="reference">
   <div class="referenceContainer">
     <div class="referenceText">
-      <p class="referenceTextcontent">
+      <p class="referenceTextcontent" [class.fade]="fade">
         {{ galleryItems[currentIndex].text[languageService.currentLanguage] }}
       </p>
-      <p class="company">
+      <p class="company" [class.fade]="fade">
         {{
           galleryItems[currentIndex].company[languageService.currentLanguage]
         }}
@@ -16,7 +16,11 @@
       />
     </div>
     <div class="imageContainer">
-      <img [src]="galleryItems[currentIndex].image" alt="Company Logo" />
+      <img
+        [src]="galleryItems[currentIndex].image"
+        alt="Company Logo"
+        [class.fade]="fade"
+      />
     </div>
   </div>
   <div class="referenceSelector">
