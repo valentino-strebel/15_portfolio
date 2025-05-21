@@ -4,7 +4,7 @@
       <img [src]="images[currentImage]" alt="Image" width="300" />
     </div>
     <a
-      [routerLink]="'/'"
+      [routerLink]="'home'"
       class="logoButton"
       (click)="displayService.pageChange('home'); scrollService.scrollToTop()"
       ><app-company-logo></app-company-logo
@@ -19,7 +19,6 @@
           (click)="scrollService.scrollTo('about'); selectionChange('about')"
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'about' }"
-          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].about[languageService.currentLanguage] }}
         </button>
@@ -27,7 +26,6 @@
           (click)="scrollService.scrollTo('skills'); selectionChange('skill')"
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'skill' }"
-          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].skill[languageService.currentLanguage] }}
         </button>
@@ -35,7 +33,6 @@
           (click)="scrollService.scrollTo('portfolio'); selectionChange('port')"
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'port' }"
-          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].port[languageService.currentLanguage] }}
         </button>
@@ -45,7 +42,6 @@
           "
           class="size23"
           [ngClass]="{ activeSel: currentSelection === 'contact' }"
-          [ngClass]="{ d_none: displayService.currentPage !== 'home' }"
         >
           {{ headerBtn[0].contact[languageService.currentLanguage] }}
         </button>

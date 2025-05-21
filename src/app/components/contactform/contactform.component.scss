@@ -1,6 +1,13 @@
 /* Style inputs with type="text", select elements and textareas */
 @import "../../variables";
 
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px #141d2f inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px #141d2f inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: white;
+}
+
 .contact {
   padding: $screenPadding;
 }
