@@ -1,7 +1,7 @@
 @import "../../variables";
 
 .intro {
-  padding: $screenPadding;
+  padding: 0 100px;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -88,7 +88,7 @@
   }
 
   .intro {
-    padding: $mobilePadding;
+    padding: 0 25px;
   }
 
   .noTransform {

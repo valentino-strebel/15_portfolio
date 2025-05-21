@@ -5,6 +5,7 @@ button {
   background-color: $hoverFocus;
   border-radius: 10px;
   padding: 15px 30px;
+  font-size: 23px;
   cursor: pointer;
   transition: transform 0.2s ease, background-color 0.2s ease;
 
@@ -20,5 +21,12 @@ button {
   &:hover {
     transform: none;
     background: gray;
+  }
+}
+
+@media (max-width: 900px) {
+  button {
+    padding: 15px 15px;
+    font-size: 16px;
   }
 }

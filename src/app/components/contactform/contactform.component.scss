@@ -105,7 +105,7 @@ form {
   min-width: 450px;
 }
 .sendButton {
-  margin: 16px 0;
+  margin: 8px 0 16px 0;
 }
 
 .contactText {
@@ -134,10 +134,6 @@ form {
   font-size: 90px;
 }
 
-span {
-  color: red;
-}
-
 .goUp {
   height: 100px;
   display: flex;
@@ -162,12 +158,14 @@ input[type="email"].invalid::placeholder {
 
 span {
   font-size: 14px;
-  height: 32px;
   display: block;
+  padding-left: 25px;
+  color: red;
+  height: 23px;
 }
 
 .height23 {
-  height: 32px;
+  height: 23px;
 }
 
 .wrap {

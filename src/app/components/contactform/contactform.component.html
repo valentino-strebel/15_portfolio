@@ -32,7 +32,9 @@
             [class.invalid]="!name.valid && name.touched"
           />
           @if(!name.valid && name.touched) {
-          <span>{{ error[0].nameError[languageService.currentLanguage] }}</span
+          <span class="entryError">{{
+            error[0].nameError[languageService.currentLanguage]
+          }}</span
           >}@else {
           <div class="height23"></div>
           }
@@ -52,7 +54,9 @@
             [class.invalid]="!email.valid && email.touched"
           />
           @if(!email.valid && email.touched) {
-          <span>{{ error[0].emailError[languageService.currentLanguage] }}</span
+          <span class="entryError">{{
+            error[0].emailError[languageService.currentLanguage]
+          }}</span
           >}@else {
           <div class="height23"></div>
           }
@@ -70,7 +74,7 @@
             [class.invalid]="!message.valid && message.touched"
           ></textarea>
           @if(!message.valid && message.touched) {
-          <span>{{
+          <span class="entryError">{{
             error[0].commentError[languageService.currentLanguage]
           }}</span
           >} @else {
@@ -104,7 +108,7 @@
           </div>
         </div>
         @if(!check.valid && check.touched) {
-        <span>{{
+        <span class="validError">{{
           error[0].privacyError[languageService.currentLanguage]
         }}</span>
         } @else {

@@ -13,3 +13,9 @@ button {
     transform: scale(1.2);
   }
 }
+
+@media (max-width: 900px) {
+  button {
+    padding: 15px;
+  }
+}
