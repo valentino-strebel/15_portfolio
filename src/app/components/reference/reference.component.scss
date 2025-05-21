@@ -136,12 +136,13 @@
     font-size: 16px;
   }
 
-  .reference {
-    padding: 0 25px;
-  }
-
   .imageContainer {
     width: 144px;
     height: 144px;
+  }
+}
+@media (max-width: 900px) {
+  .reference {
+    padding: $mobilePadding;
   }
 }
