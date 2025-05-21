@@ -9,12 +9,7 @@ import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [
-    CompanyLogoComponent,
-    RouterLink,
-    RouterLinkActive,
-    HeaderComponent,
-  ],
+  imports: [CompanyLogoComponent, RouterLink, RouterLinkActive],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
@@ -22,8 +17,7 @@ export class FooterComponent {
   constructor(
     public scrollService: ScrollService,
     public displayService: DisplayService,
-    public languageService: LanguageService,
-    public headerComponent: HeaderComponent
+    public languageService: LanguageService
   ) {}
 
   footer = [

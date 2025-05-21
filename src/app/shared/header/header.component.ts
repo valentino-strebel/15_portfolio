@@ -1,11 +1,11 @@
 import { Component, Injectable } from '@angular/core';
 import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { LanguageService } from '../language.service';
-import { ScrollService } from '../scroll.service';
+import { ScrollService, Section } from '../scroll.service';
 import { CommonModule } from '@angular/common';
 import { DisplayService } from '../display.service';
 import { RouterLink } from '@angular/router';
-type Section = 'about' | 'skill' | 'port' | 'contact' | null;
+
 @Injectable({
   providedIn: 'root',
 })
@@ -23,18 +23,11 @@ export class HeaderComponent {
     public displayService: DisplayService
   ) {}
 
-  currentSelection: Section = null;
-
   currentImage: number = 0;
 
   interval: any;
 
   direction = 1;
-
-  selectionChange(comp: Section) {
-    this.currentSelection = comp;
-    console.log(this.currentSelection);
-  }
 
   images: string[] = [
     '../../../assets/img/icons/burger/burger1.svg',

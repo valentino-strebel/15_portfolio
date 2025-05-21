@@ -16,32 +16,44 @@
     >
       <nav class="pageNavigationButtons flexSpaceBetween">
         <button
-          (click)="scrollService.scrollTo('about'); selectionChange('about')"
+          (click)="
+            scrollService.scrollTo('about');
+            scrollService.selectionChange('about')
+          "
           class="size23"
-          [ngClass]="{ activeSel: currentSelection === 'about' }"
+          [ngClass]="{ activeSel: scrollService.currentSelection === 'about' }"
         >
           {{ headerBtn[0].about[languageService.currentLanguage] }}
         </button>
         <button
-          (click)="scrollService.scrollTo('skills'); selectionChange('skill')"
+          (click)="
+            scrollService.scrollTo('skills');
+            scrollService.selectionChange('skill')
+          "
           class="size23"
-          [ngClass]="{ activeSel: currentSelection === 'skill' }"
+          [ngClass]="{ activeSel: scrollService.currentSelection === 'skill' }"
         >
           {{ headerBtn[0].skill[languageService.currentLanguage] }}
         </button>
         <button
-          (click)="scrollService.scrollTo('portfolio'); selectionChange('port')"
+          (click)="
+            scrollService.scrollTo('portfolio');
+            scrollService.selectionChange('port')
+          "
           class="size23"
-          [ngClass]="{ activeSel: currentSelection === 'port' }"
+          [ngClass]="{ activeSel: scrollService.currentSelection === 'port' }"
         >
           {{ headerBtn[0].port[languageService.currentLanguage] }}
         </button>
         <button
           (click)="
-            scrollService.scrollTo('contact'); selectionChange('contact')
+            scrollService.scrollTo('contact');
+            scrollService.selectionChange('contact')
           "
           class="size23"
-          [ngClass]="{ activeSel: currentSelection === 'contact' }"
+          [ngClass]="{
+            activeSel: scrollService.currentSelection === 'contact'
+          }"
         >
           {{ headerBtn[0].contact[languageService.currentLanguage] }}
         </button>
