@@ -34,7 +34,9 @@
         [routerLink]="'/privacy-policy'"
         routerLinkActive="active"
         (click)="
-          displayService.pageChange('privacy'); scrollService.scrollToTop()
+          displayService.pageChange('privacy');
+          scrollService.scrollToTop();
+          headerComponent.selectionChange(null)
         "
         >{{ footer[0].data[languageService.currentLanguage] }}</a
       >
@@ -44,7 +46,9 @@
         [routerLink]="'/impress'"
         routerLinkActive="active"
         (click)="
-          displayService.pageChange('impress'); scrollService.scrollToTop()
+          displayService.pageChange('impress');
+          scrollService.scrollToTop();
+          headerComponent.selectionChange(null)
         "
         >{{ footer[0].impress[languageService.currentLanguage] }}</a
       >
