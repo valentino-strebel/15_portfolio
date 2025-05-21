@@ -10,7 +10,7 @@
   flex-wrap: wrap;
   width: 664px;
   gap: 88px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .skillItem {
@@ -86,6 +86,12 @@
 .skillText {
   font-weight: 700;
   font-size: 16px;
+}
+
+@media (max-width: 1600px) {
+  .skillsList {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 1300px) {

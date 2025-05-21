@@ -117,6 +117,7 @@
       <div class="flexCenter sendButton">
         <app-submit-button
           buttonText="{{ contact[0].send[languageService.currentLanguage] }}"
+          [disabled]="!contactForm.valid"
         ></app-submit-button>
       </div>
     </form>

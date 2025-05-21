@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SubmitButtonComponent {
   @Input() buttonText: string = 'Default Text';
+  @Input() disabled: boolean = false;
 }

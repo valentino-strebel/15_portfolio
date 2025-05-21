@@ -39,6 +39,8 @@
     border-radius: 10px;
     font-size: 23px;
     text-decoration: none;
+    transition: background-color 0.2s ease;
+
     &:hover {
       background-color: $hoverFocus;
     }
