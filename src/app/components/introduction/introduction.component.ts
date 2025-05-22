@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
 import { StandardButtonComponent } from '../../shared/standard-button/standard-button.component';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../shared/scroll.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-introduction',
@@ -11,11 +12,14 @@ import { ScrollService } from '../../shared/scroll.service';
   templateUrl: './introduction.component.html',
   styleUrl: './introduction.component.scss',
 })
-export class IntroductionComponent {
+export class IntroductionComponent implements AfterViewInit {
   constructor(
     public languageService: LanguageService,
     public scrollService: ScrollService
   ) {}
+  ngAfterViewInit() {
+    AOS.refresh();
+  }
 
   intro = [
     {

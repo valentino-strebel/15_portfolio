@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { SkillLogosComponent } from './skill-logos/skill-logos.component';
 import { SkillDescriptionComponent } from './skill-description/skill-description.component';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-skills',
@@ -9,4 +10,8 @@ import { SkillDescriptionComponent } from './skill-description/skill-description
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
-export class SkillsComponent {}
+export class SkillsComponent implements AfterViewInit {
+  ngAfterViewInit() {
+    AOS.refresh();
+  }
+}

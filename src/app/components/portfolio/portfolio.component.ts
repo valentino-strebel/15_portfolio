@@ -1,7 +1,8 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { PortTextComponent } from './port-text/port-text.component';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../shared/language.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',
@@ -10,13 +11,17 @@ import { LanguageService } from '../../shared/language.service';
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
   constructor(public languageService: LanguageService) {}
 
   isWideScreen: boolean = false;
 
   ngOnInit() {
     this.checkScreenWidth();
+  }
+
+  ngAfterViewInit() {
+    AOS.refresh();
   }
 
   @HostListener('window:resize', ['$event'])

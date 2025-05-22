@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-reference',
@@ -9,8 +10,12 @@ import { LanguageService } from '../../shared/language.service';
   templateUrl: './reference.component.html',
   styleUrl: './reference.component.scss',
 })
-export class ReferenceComponent {
+export class ReferenceComponent implements AfterViewInit {
   constructor(public languageService: LanguageService) {}
+
+  ngAfterViewInit() {
+    AOS.refresh();
+  }
 
   fade: boolean = false;
 

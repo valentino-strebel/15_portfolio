@@ -1,4 +1,4 @@
-import { Component, NgModule, inject } from '@angular/core';
+import { Component, AfterViewInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SubmitButtonComponent } from '../../shared/submit-button/submit-button.component';
 import { HttpClient } from '@angular/common/http';
@@ -7,6 +7,7 @@ import { ScrollService } from '../../shared/scroll.service';
 import { DisplayService } from '../../shared/display.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-contactform',
@@ -21,13 +22,18 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss',
 })
-export class ContactformComponent {
+export class ContactformComponent implements AfterViewInit {
   constructor(
     public languageService: LanguageService,
     public scrollService: ScrollService,
     public displayService: DisplayService
   ) {}
+
   http = inject(HttpClient);
+
+  ngAfterViewInit() {
+    AOS.refresh();
+  }
 
   contact = [
     {

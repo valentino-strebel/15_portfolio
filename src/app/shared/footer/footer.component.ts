@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { ScrollService } from '../scroll.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DisplayService } from '../display.service';
 import { LanguageService } from '../language.service';
-import { HeaderComponent } from '../header/header.component';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-footer',
@@ -13,12 +13,16 @@ import { HeaderComponent } from '../header/header.component';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
-export class FooterComponent {
+export class FooterComponent implements AfterViewInit {
   constructor(
     public scrollService: ScrollService,
     public displayService: DisplayService,
     public languageService: LanguageService
   ) {}
+
+  ngAfterViewInit() {
+    AOS.refresh();
+  }
 
   footer = [
     {

@@ -15,7 +15,7 @@
         {{ subheader[0].line[languageService.currentLanguage] }}
       </p>
     </div>
-    <div *ngFor="let project of projects; let i = index">
+    <div *ngFor="let project of projects; let i = index" data-aos="zoom-in">
       <app-port-text
         [ngClass]="{ 'reverse-layout': isWideScreen && i % 2 !== 0 }"
         [imageUrl]="project.img"

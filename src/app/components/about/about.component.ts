@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-about',
@@ -8,8 +9,12 @@ import { LanguageService } from '../../shared/language.service';
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
 })
-export class AboutComponent {
+export class AboutComponent implements AfterViewInit {
   constructor(public languageService: LanguageService) {}
+
+  ngAfterViewInit() {
+    AOS.refresh();
+  }
 
   about = [
     {
