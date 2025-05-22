@@ -2,6 +2,7 @@
 
 .portfolio {
   padding: $screenPadding;
+  overflow-x: hidden;
 }
 
 .portfolioContainer {
@@ -19,6 +20,37 @@
   flex-direction: column;
   align-items: center;
   gap: 40px;
+}
+
+.headlineRelative {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.headerPosition {
+  justify-content: center;
+  display: flex;
+}
+
+.purpleLineRight {
+  width: 100vw;
+  position: absolute;
+  background-color: $activeClick;
+  height: 4px;
+  top: 50%;
+  right: -15px;
+  transform: translateX(100%);
+}
+
+.purpleLineLeft {
+  width: 10%;
+  position: absolute;
+  background-color: $activeClick;
+  height: 4px;
+  top: 50%;
+  left: -15px;
+  transform: translateX(-100%);
 }
 
 .headline p {

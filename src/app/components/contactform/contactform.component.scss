@@ -11,6 +11,26 @@ input:-webkit-autofill {
 .contact {
   padding: $screenPadding;
 }
+.headlineRelative {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+.headerPosition {
+  justify-content: center;
+  display: flex;
+}
+
+.purpleLine {
+  width: 100vw;
+  position: absolute;
+  background-color: $activeClick;
+  height: 4px;
+  top: 50%;
+  left: -15px;
+  transform: translateX(-100%);
+}
 
 .confirm {
   color: $hoverFocus;
@@ -121,10 +141,7 @@ form {
 .contactContainer {
   display: flex;
   justify-content: space-between;
-}
-
-.headline {
-  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .headline p {

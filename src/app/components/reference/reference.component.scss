@@ -1,12 +1,13 @@
 @import "../../variables";
 
 .reference {
-  margin: auto;
-  max-width: 1440px;
-  padding: 0 100px;
+  overflow-x: hidden;
+  padding: 25px 100px;
 }
 
 .referenceContainer {
+  max-width: 1440px;
+  margin: auto;
   display: flex;
   gap: 48px;
   align-items: center;
@@ -15,20 +16,33 @@
 }
 
 .imageContainer {
-  opacity: 1;
+  position: relative;
   width: 272px;
   height: 272px;
-  border-radius: 100%;
+  opacity: 1;
   border: 4px solid $activeClick;
-  overflow: hidden;
+  border-radius: 100%;
   img {
+    border-radius: 100%;
     height: 100%;
     width: 100%;
     object-fit: contain;
     background-color: white;
     transition: opacity 0.2s ease-in-out;
+    object-fit: contain;
   }
 }
+
+.purpleLine {
+  width: 100vw;
+  position: absolute;
+  background-color: $activeClick;
+  height: 4px;
+  top: 50%;
+  right: 0;
+  transform: translateX(100%);
+}
+
 .referenceTextcontent.fade,
 .company.fade,
 .imageContainer img.fade {

@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 .skillDescription {
   display: flex;
   flex-direction: column;
@@ -6,12 +8,32 @@
   padding: 25px 0;
 }
 
+.headerPosition {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.headlineRelative {
+  position: relative;
+  width: fit-content;
+}
+
 .headline {
   font-size: 90px;
   font-weight: 700;
 }
 
 .purpleLine {
+  width: 100vw;
+  position: absolute;
+  background-color: $activeClick;
+  height: 4px;
+  top: 50%;
+  right: -25px;
+  transform: translateX(100%);
+}
+
+.purpleText {
   font-size: 32px;
   font-weight: 700;
 }
@@ -19,6 +41,9 @@
 @media (max-width: 1600px) {
   .skillDescription {
     text-align: center;
+  }
+  .headerPosition {
+    justify-content: center;
   }
 }
 

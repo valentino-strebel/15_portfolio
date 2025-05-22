@@ -16,6 +16,15 @@
   flex-direction: column;
   gap: 35px;
 }
+.purpleLine {
+  width: 100vw;
+  position: absolute;
+  background-color: $activeClick;
+  height: 4px;
+  top: 50%;
+  left: -15px;
+  transform: translateX(-100%);
+}
 
 .profileImage {
   max-width: 400px;
@@ -51,7 +60,14 @@
   text-transform: uppercase;
 }
 
+.buttonsAlignment {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
 .actionButtons {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -62,6 +78,8 @@
   a {
     font-size: 23px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
     &:hover img {
       transform: scale(1.2);
     }
@@ -92,10 +110,10 @@
   }
 
   .noTransform {
-    display: none;
+    display: none !important;
   }
 
-  .actionButtons {
+  .buttonsAlignment {
     justify-content: center;
   }
 

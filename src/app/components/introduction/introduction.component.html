@@ -8,11 +8,6 @@
       />
       <div class="introText gap35">
         <div class="introDesc flexCenter">
-          <!-- <div class="rotate">
-            <p>
-              {{ intro[0].first[languageService.currentLanguage] }}
-            </p>
-          </div>-->
           <div>
             <p class="name">{{ intro[0].second }}</p>
             <p class="profession">
@@ -26,28 +21,33 @@
         ></app-standard-button>
       </div>
     </div>
-    <div class="actionButtons">
-      <a href="https://github.com/valentino-strebel" target="_blank"
-        ><img
-          src="../../../assets/img/icons/8. Github button.svg"
-          alt="GitHub Link"
-      /></a>
-      <a href="mailto:office@strebel-company.de" target="_blank"
-        ><img
-          src="../../../assets/img/icons/9. Email button.svg"
-          alt="Email Link"
-      /></a>
-      <a href="https://linkedin.com/in/valentino-guido-strebel" target="_blank"
-        ><img
-          src="../../../assets/img/icons/10. Linkedin button.svg"
-          alt="LinkedIn Link"
-      /></a>
-      <a
-        class="noTransform"
-        href="mailto:office@strebel-company.de"
-        target="_blank"
-        >{{ intro[0].mail }}</a
-      >
+    <div class="buttonsAlignment">
+      <div class="actionButtons">
+        <a href="https://github.com/valentino-strebel" target="_blank"
+          ><img
+            src="../../../assets/img/icons/8. Github button.svg"
+            alt="GitHub Link"
+        /></a>
+        <a href="mailto:office@strebel-company.de" target="_blank"
+          ><img
+            src="../../../assets/img/icons/9. Email button.svg"
+            alt="Email Link"
+        /></a>
+        <a
+          href="https://linkedin.com/in/valentino-guido-strebel"
+          target="_blank"
+          ><img
+            src="../../../assets/img/icons/10. Linkedin button.svg"
+            alt="LinkedIn Link"
+        /></a>
+        <a
+          class="noTransform"
+          href="mailto:office@strebel-company.de"
+          target="_blank"
+          >{{ intro[0].mail }}</a
+        >
+        <div class="purpleLine"></div>
+      </div>
     </div>
   </div>
 </div>

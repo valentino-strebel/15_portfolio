@@ -72,6 +72,9 @@
 }
 
 @media (max-width: 1300px) {
+  .portText {
+    text-align: center;
+  }
   .portFullDesc {
     flex-direction: column;
   }
@@ -86,6 +89,7 @@
   }
   .portButtons {
     gap: 24px;
+    justify-content: center !important;
     a {
       padding: 10px 10px;
       font-size: 16px;
