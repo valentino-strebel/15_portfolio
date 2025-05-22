@@ -47,7 +47,7 @@ export class PortfolioComponent implements OnInit {
       },
       tech: 'HTML | CSS | JS | Firebase | Agile',
       gameUrl: 'https://port3.strebel-company.de',
-      gitUrl: 'https://github.com/vale-cannelloni/join-415',
+      gitUrl: 'https://github.com/valentino-strebel/join-415',
     },
     {
       img: '../../assets/img/display/pollo.svg',
@@ -58,7 +58,7 @@ export class PortfolioComponent implements OnInit {
       },
       tech: 'HTML | CSS | JS | Object Oriented',
       gameUrl: 'https://port1.strebel-company.de',
-      gitUrl: 'https://github.com/vale-cannelloni/11_pollo_loco',
+      gitUrl: 'https://github.com/valentino-strebel/11_pollo_loco',
     },
     {
       img: '../../assets/img/display/pokedex.svg',
@@ -69,7 +69,7 @@ export class PortfolioComponent implements OnInit {
       },
       tech: 'HTML | CSS | JS | API',
       gameUrl: 'https://port2.strebel-company.de',
-      gitUrl: 'https://github.com/vale-cannelloni/9_pokedex',
+      gitUrl: 'https://github.com/valentino-strebel/9_pokedex',
     },
     {
       img: '../../assets/img/display/website.png',
@@ -80,7 +80,7 @@ export class PortfolioComponent implements OnInit {
       },
       tech: 'Angular | TypeScript | SCSS | HTML | SFTP | Web Hosting Configuration',
       gameUrl: 'https://www.strebel-company.de',
-      gitUrl: 'https://github.com/vale-cannelloni/15_portfolio',
+      gitUrl: 'https://github.com/valentino-strebel/15_portfolio',
     },
   ];
 }
