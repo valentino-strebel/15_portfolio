@@ -38,8 +38,8 @@ export class HeaderComponent {
 
   headerBtn = [
     {
-      about: { en: 'About Me', de: 'Über mich' },
-      skill: { en: 'Skills', de: 'Qualifikationen' },
+      about: { en: 'About us', de: 'Über uns' },
+      skill: { en: 'Skills', de: 'Expertise' },
       port: { en: 'Portfolio', de: 'Portfolio' },
       contact: { en: 'Contact', de: 'Kontakt' },
     },
