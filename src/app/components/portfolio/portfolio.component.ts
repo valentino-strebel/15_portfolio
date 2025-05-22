@@ -76,12 +76,15 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       gameUrl: 'https://port2.strebel-company.de',
       gitUrl: 'https://github.com/valentino-strebel/9_pokedex',
     },
+  ];
+
+  website = [
     {
       img: '../../assets/img/display/website.png',
-      name: 'Website Development',
+      name: { en: 'Modern Web Solutions', de: 'Moderne Weblösungen' },
       desc: {
-        en: 'This website was developed with a strong emphasis on modern web standards, performance, and maintainability. Built using Angular and a modular architecture, it ensures scalability and a seamless user experience across devices. The layout and styling follow contemporary design guidelines, with clean, responsive components crafted using SCSS and semantic HTML. In addition to development, I handled all aspects of deployment, including SFTP setup and web hosting configuration, ensuring a secure and efficient launch process.',
-        de: 'Diese Website wurde mit einem klaren Fokus auf moderne Webstandards, Performance und Wartbarkeit entwickelt. Durch den Einsatz von Angular in einer modularen Architektur ist sie skalierbar und bietet eine nahtlose Benutzererfahrung auf allen Geräten. Layout und Styling orientieren sich an aktuellen Designrichtlinien und wurden mit SCSS und semantischem HTML umgesetzt. Neben der eigentlichen Entwicklung habe ich auch die Einrichtung des SFTP-Zugangs sowie die Konfiguration des Webhostings übernommen, um eine sichere und effiziente Bereitstellung zu gewährleisten.',
+        en: 'This website was developed by us with a strong focus on modern web standards, performance, and long-term maintainability. Built with Angular and a modular architecture, it offers scalability and a seamless experience across all devices. The layout and styling follow contemporary design principles, using clean, responsive components crafted with SCSS and semantic HTML. Beyond development, we managed the entire deployment process — including SFTP setup and web hosting configuration — to ensure a secure and efficient launch.',
+        de: 'Diese Website wurde von uns mit einem klaren Fokus auf moderne Webstandards, Leistung und langfristige Wartbarkeit entwickelt. Mit Angular und einer modularen Architektur aufgebaut, bietet sie Skalierbarkeit und ein nahtloses Nutzererlebnis auf allen Geräten. Layout und Design folgen aktuellen Gestaltungsprinzipien – mit sauberen, responsiven Komponenten, entwickelt mit SCSS und semantischem HTML. Neben der Entwicklung haben wir auch den gesamten Deployment-Prozess übernommen – einschließlich SFTP-Einrichtung und Webhosting-Konfiguration – und so einen sicheren und effizienten Launch gewährleistet.',
       },
       tech: 'Angular | TypeScript | SCSS | HTML | SFTP | Web Hosting Configuration',
       gameUrl: 'https://www.strebel-company.de',

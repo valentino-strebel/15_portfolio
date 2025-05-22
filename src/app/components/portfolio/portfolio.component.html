@@ -26,5 +26,27 @@
         [projectGit]="project.gitUrl"
       ></app-port-text>
     </div>
+    <div class="website">
+      <div class="portText gap15">
+        <p class="size32 weight700 purpleColor">
+          {{ website[0].name[languageService.currentLanguage] }}
+        </p>
+        <p class="size23 greenColor">
+          {{ website[0].tech }}
+        </p>
+        <p class="size16">
+          {{ website[0].desc[languageService.currentLanguage] }}
+        </p>
+      </div>
+      <div class="portButtons">
+        <a
+          href="{{ website[0].gitUrl }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="git"
+          >Github</a
+        >
+      </div>
+    </div>
   </div>
 </div>
