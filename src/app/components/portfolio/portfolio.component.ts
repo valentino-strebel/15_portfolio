@@ -25,7 +25,9 @@ export class PortfolioComponent implements OnInit {
   }
 
   private checkScreenWidth() {
-    this.isWideScreen = window.innerWidth >= 1100;
+    if (typeof window !== 'undefined') {
+      this.isWideScreen = window.innerWidth >= 1100;
+    }
   }
   subheader = [
     {
