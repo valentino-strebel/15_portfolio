@@ -37,8 +37,8 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   subheader = [
     {
       line: {
-        en: 'Explore a selection of my work here - Interact with projects to see my skills in action.',
-        de: 'Entdecke eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu erleben.',
+        en: 'Explore a selection of our work – interact with the projects to see our skills in action.',
+        de: 'Entdecken Sie eine Auswahl unserer Arbeiten – interagieren Sie mit den Projekten, um unsere Fähigkeiten in Aktion zu erleben.',
       },
     },
   ];

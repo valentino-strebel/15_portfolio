@@ -23,9 +23,12 @@ export class IntroductionComponent implements AfterViewInit {
 
   intro = [
     {
-      first: { en: 'I am', de: 'Ich bin' },
-      second: 'Valentino Strebel',
-      third: { en: 'Software Developer', de: 'Software Entwickler' },
+      first: { en: 'We are', de: 'Wir sind' },
+      second: 'Strebel Company',
+      third: {
+        en: 'Business Consultant & Software Developer',
+        de: 'Unternehmensberater & Software Entwickler',
+      },
       button: { en: "Let's talk", de: 'Schreiben Sie uns' },
       mail: 'office@strebel-company.de',
     },
