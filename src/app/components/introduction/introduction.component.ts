@@ -26,8 +26,8 @@ export class IntroductionComponent implements AfterViewInit {
       first: { en: 'We are', de: 'Wir sind' },
       second: 'STREBEL COMPANY',
       third: {
-        en: 'Business Consultant & Software Developer',
-        de: 'Business Consultant & Software Entwickler',
+        en: 'Business Consulting & Software Development',
+        de: 'Business Consulting & Software Development',
       },
       button: { en: "Let's talk", de: 'Schreiben Sie uns' },
       mail: 'office@strebel-company.de',

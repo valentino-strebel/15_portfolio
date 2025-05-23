@@ -2,7 +2,6 @@
 
 .intro {
   padding: 0 100px;
-  height: 100vh;
   display: flex;
   align-items: center;
   background: linear-gradient(to bottom, #27334b, #141d2f) !important;
@@ -11,6 +10,8 @@
 .introContainer {
   max-width: 1440px;
   width: 100%;
+  min-height: 100vh;
+
   margin: auto;
   display: flex;
   flex-direction: column;
