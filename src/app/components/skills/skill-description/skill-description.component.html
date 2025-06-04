@@ -1,26 +1,31 @@
-<div class="skillDescription">
-  <div class="headerPosition">
-    <div class="headlineRelative">
-      <p class="headline">
-        {{ skills[0].headline[languageService.currentLanguage] }}
-      </p>
-    </div>
-  </div>
+<section class="skillDescription" aria-labelledby="skillHeadline">
+  <header class="headerPosition">
+    <h2 id="skillHeadline" class="headline">
+      {{ skills[0].headline[languageService.currentLanguage] }}
+    </h2>
+  </header>
+
   <p class="size16">
     {{ skills[0].desc[languageService.currentLanguage] }}
   </p>
+
   <p class="purpleText">
-    {{ skills[0].subline[languageService.currentLanguage]
-    }}<span class="purpleColor">{{
-      skills[0].sublineColor[languageService.currentLanguage]
-    }}</span
-    >?
+    {{ skills[0].subline[languageService.currentLanguage] }}
+    <span class="purpleColor" aria-hidden="true">
+      {{ skills[0].sublineColor[languageService.currentLanguage] }}
+    </span>
+    <span class="sr-only">?</span>
   </p>
+
   <p class="size16">
     {{ skills[0].subdesc[languageService.currentLanguage] }}
   </p>
+
   <app-standard-button
+    role="button"
+    tabindex="0"
+    aria-label="Scroll to contact section"
     (click)="scrollService.scrollTo('contact')"
-    buttonText="{{ skills[0].buttonText[languageService.currentLanguage] }}"
+    [buttonText]="skills[0].buttonText[languageService.currentLanguage]"
   ></app-standard-button>
-</div>
+</section>

@@ -1,34 +1,52 @@
-<div class="about">
+<section class="about" aria-labelledby="aboutHeader">
   <div class="aboutContainer flexSpaceBetween">
     <div class="aboutText" data-aos="flip-up">
-      <p class="header">
+      <h2 id="aboutHeader">
         {{ about[0].head[languageService.currentLanguage] }}
-      </p>
+      </h2>
+
       <div class="textDetails size16">
         <p>{{ about[0].desc[languageService.currentLanguage] }}</p>
-        <div class="textComp flexRight">
-          <img src="../../../assets/img/icons/11.Location.svg" alt="Location" />
+
+        <div class="textComp flexRight" role="group" aria-label="Location">
+          <img
+            src="../../../assets/img/icons/11.Location.svg"
+            alt=""
+            aria-hidden="true"
+          />
           <p>{{ about[0].loc[languageService.currentLanguage] }}</p>
         </div>
-        <div class="textComp flexRight">
+
+        <div class="textComp flexRight" role="group" aria-label="Learning">
           <img
             src="../../../assets/img/icons/12. bulb desktop.svg"
-            alt="Learning"
+            alt=""
+            aria-hidden="true"
           />
           <p>{{ about[0].learn[languageService.currentLanguage] }}</p>
         </div>
-        <div class="textComp flexRight">
+
+        <div
+          class="textComp flexRight"
+          role="group"
+          aria-label="Problem Solving"
+        >
           <img
             src="../../../assets/img/icons/13. puzzle desktop.svg"
-            alt="Solution"
+            alt=""
+            aria-hidden="true"
           />
           <p>{{ about[0].solve[languageService.currentLanguage] }}</p>
         </div>
       </div>
     </div>
+
     <div class="aboutImage" data-aos="fade-left">
-      <img src="../../../assets/img/self/portfoli_2.png" alt="Profile" />
-      <div class="greenLine"></div>
+      <img
+        src="../../../assets/img/self/portfoli_2.png"
+        alt="Portrait of Valentino Strebel"
+      />
+      <div class="greenLine" aria-hidden="true"></div>
     </div>
   </div>
-</div>
+</section>

@@ -1,46 +1,74 @@
-<div class="reference" data-aos="fade-up">
+<section
+  class="reference"
+  data-aos="fade-up"
+  role="region"
+  aria-label="Testimonials"
+>
   <div class="referenceContainer">
-    <div class="referenceText">
-      <p class="referenceTextcontent" [class.fade]="fade">
-        {{ galleryItems[currentIndex].text[languageService.currentLanguage] }}
-      </p>
-      <p class="company" [class.fade]="fade">
+    <figure class="referenceText">
+      <blockquote>
+        <p class="referenceTextcontent" [class.fade]="fade" aria-live="polite">
+          {{ galleryItems[currentIndex].text[languageService.currentLanguage] }}
+        </p>
+      </blockquote>
+      <figcaption class="company" [class.fade]="fade" aria-live="polite">
         {{
           galleryItems[currentIndex].company[languageService.currentLanguage]
         }}
-      </p>
+      </figcaption>
       <img
         class="quote"
         src="../../../assets/img/icons/quote.png"
-        alt="Quote"
+        alt="Decorative quote icon"
+        role="presentation"
       />
-    </div>
+    </figure>
     <div class="imageContainer">
       <img
         [src]="galleryItems[currentIndex].image"
-        alt="Company Logo"
+        alt="Logo of {{
+          galleryItems[currentIndex].company[languageService.currentLanguage]
+        }}"
         [class.fade]="fade"
       />
-      <div class="purpleLine"></div>
+      <div class="purpleLine" aria-hidden="true"></div>
     </div>
   </div>
-  <div class="referenceSelector">
-    <button (click)="prevItem()">
-      <img src="../../../assets/img/icons/arrow_back.svg" alt="Arrow Back" />
+
+  <nav
+    class="referenceSelector"
+    role="navigation"
+    aria-label="Testimonial navigation"
+  >
+    <button (click)="prevItem()" aria-label="Previous testimonial">
+      <img
+        src="../../../assets/img/icons/arrow_back.svg"
+        alt=""
+        role="presentation"
+      />
     </button>
+
     <div
       class="referenceDots"
       *ngFor="let _ of galleryItems; let i = index"
       [id]="'symbol-' + i"
       [ngClass]="{ referenceActive: currentSymbol === 'symbol-' + i }"
+      [attr.aria-current]="currentSymbol === 'symbol-' + i ? 'true' : null"
+      role="button"
+      tabindex="0"
+      (keydown.enter)="selectItem(i)"
+      (click)="selectItem(i)"
+      [attr.aria-label]="'Go to testimonial ' + (i + 1)"
     >
       &#x2022;
     </div>
-    <button (click)="nextItem()">
+
+    <button (click)="nextItem()" aria-label="Next testimonial">
       <img
         src="../../../assets/img/icons/arrow_forward.svg"
-        alt="Arrow Forward"
+        alt=""
+        role="presentation"
       />
     </button>
-  </div>
-</div>
+  </nav>
+</section>

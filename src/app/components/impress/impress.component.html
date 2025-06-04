@@ -1,14 +1,24 @@
-<section class="impress">
+<section class="impress" aria-labelledby="company-name">
   <div class="impressContainer">
-    <p><b>Strebel Company</b></p>
+    <p id="company-name"><strong>Strebel Company</strong></p>
     <p>Valentino Strebel</p>
     <p>Dorfstraße 12a</p>
     <p>85375, Neufahrn b. Freising</p>
     <p>Deutschland / Germany</p>
-    <p>Tel: <a href="tel:+491711505613">+49 171 1505613</a></p>
+    <p>
+      Tel:
+      <a href="tel:+491711505613" aria-label="Phone number: +49 171 1505613">
+        +49 171 1505613
+      </a>
+    </p>
     <p>
       Email:
-      <a href="mailto:office@strebel-company.de">{{ email }}</a>
+      <a
+        href="mailto:office@strebel-company.de"
+        aria-label="Email: office@strebel-company.de"
+      >
+        {{ email }}
+      </a>
     </p>
     <p>USt. / VAT ID: DE453021781</p>
   </div>

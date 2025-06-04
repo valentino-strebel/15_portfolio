@@ -1,19 +1,25 @@
-<div class="contact">
-  <div class="headerPosition">
+<section class="contact" aria-labelledby="contactSectionHeader">
+  <header class="headerPosition">
     <div class="headlineRelative">
       <div class="headline">
-        <p>
+        <h1 id="contactSectionHeader">
           {{ contact[0].sec[languageService.currentLanguage] }}
-        </p>
+        </h1>
         <div class="purpleLine"></div>
       </div>
     </div>
-  </div>
-  <div class="contactContainer" data-aos="fade-right">
+  </header>
+
+  <section
+    class="contactContainer"
+    data-aos="fade-right"
+    role="form"
+    aria-label="Contact form section"
+  >
     <div class="contactText">
-      <p class="size32 weight700">
+      <h2 class="size32 weight700">
         {{ contact[0].header[languageService.currentLanguage] }}
-      </p>
+      </h2>
       <p class="size16">
         {{ contact[0].subhead[languageService.currentLanguage] }}
       </p>
@@ -22,9 +28,19 @@
         <b>{{ contact[0].desc2[languageService.currentLanguage] }}</b>
       </p>
     </div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <div class="formContent">
+
+    <form
+      (ngSubmit)="onSubmit(contactForm)"
+      #contactForm="ngForm"
+      aria-describedby="formInstructions"
+    >
+      <fieldset class="formContent">
+        <legend id="formInstructions" class="sr-only">
+          Fill in the form below to send us a message
+        </legend>
+
         <div>
+          <label for="name" class="sr-only">Name</label>
           <input
             #name="ngModel"
             minlength="4"
@@ -34,17 +50,20 @@
             name="personName"
             placeholder="{{ contact[0].name[languageService.currentLanguage] }}"
             required
+            aria-required="true"
             [class.invalid]="!name.valid && name.touched"
           />
           @if(!name.valid && name.touched) {
           <span class="entryError">{{
             error[0].nameError[languageService.currentLanguage]
-          }}</span
-          >}@else {
+          }}</span>
+          } @else {
           <div class="height23"></div>
           }
         </div>
+
         <div>
+          <label for="email" class="sr-only">Email</label>
           <input
             #email="ngModel"
             [(ngModel)]="contactData.email"
@@ -56,17 +75,20 @@
             }}"
             required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            aria-required="true"
             [class.invalid]="!email.valid && email.touched"
           />
           @if(!email.valid && email.touched) {
           <span class="entryError">{{
             error[0].emailError[languageService.currentLanguage]
-          }}</span
-          >}@else {
+          }}</span>
+          } @else {
           <div class="height23"></div>
           }
         </div>
+
         <div>
+          <label for="subject" class="sr-only">Message</label>
           <textarea
             #message="ngModel"
             minlength="4"
@@ -75,17 +97,19 @@
             name="subject"
             placeholder="{{ contact[0].msg[languageService.currentLanguage] }}"
             required
+            aria-required="true"
             style="height: 200px"
             [class.invalid]="!message.valid && message.touched"
           ></textarea>
           @if(!message.valid && message.touched) {
           <span class="entryError">{{
             error[0].commentError[languageService.currentLanguage]
-          }}</span
-          >} @else {
+          }}</span>
+          } @else {
           <div class="height23"></div>
           }
         </div>
+
         <div class="privacyPolicyAccept">
           <input
             type="checkbox"
@@ -94,8 +118,12 @@
             [(ngModel)]="contactData.privacyAccepted"
             #check="ngModel"
             required
+            aria-required="true"
           />
           <div class="wrap">
+            <label for="privacyCheck" class="sr-only"
+              >Accept Privacy Policy</label
+            >
             <p class="size14">
               {{ contact[0].priv1[languageService.currentLanguage] }}
             </p>
@@ -105,8 +133,8 @@
               routerLinkActive="active"
               (click)="displayService.pageChange('privacy')"
             >
-              {{ contact[0].link[languageService.currentLanguage] }}</a
-            >
+              {{ contact[0].link[languageService.currentLanguage] }}
+            </a>
             <p class="size14">
               {{ contact[0].priv2[languageService.currentLanguage] }}
             </p>
@@ -119,10 +147,12 @@
         } @else {
         <div class="height23"></div>
         }
-      </div>
+      </fieldset>
+
       <p [ngClass]="{ confirm: true, 'confirm-active': isConfirmed }">
         {{ confirm[0].ok[languageService.currentLanguage] }}
       </p>
+
       <div class="flexCenter sendButton">
         <app-submit-button
           buttonText="{{ contact[0].send[languageService.currentLanguage] }}"
@@ -130,12 +160,13 @@
         ></app-submit-button>
       </div>
     </form>
-  </div>
-  <div class="goUp">
+  </section>
+
+  <div class="goUp" role="button" aria-label="Go to top">
     <img
       (click)="scrollService.scrollToTop()"
       src="../../../assets/img/icons/4. Go up button.svg"
       alt="Go Up"
     />
   </div>
-</div>
+</section>

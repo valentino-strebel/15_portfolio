@@ -1,54 +1,80 @@
-<div class="intro">
+<section class="intro" aria-labelledby="intro-heading">
   <div class="introContainer">
     <div class="introContent">
       <img
         class="profileImage"
         src="../../../assets/img/self/portfolio_1.png"
-        alt="Profile"
+        alt="Portrait of Valentino Guido Strebel"
         data-aos="fade-right"
       />
       <div class="introText gap35" data-aos="fade-left">
-        <div class="introDesc flexCenter">
+        <header class="introDesc flexCenter">
           <div>
-            <p class="name">{{ intro[0].second }}</p>
-            <p class="profession">
+            <p id="intro-heading" class="name">{{ intro[0].second }}</p>
+            <p class="profession" aria-live="polite">
               {{ intro[0].third[languageService.currentLanguage] }}
             </p>
           </div>
-        </div>
+        </header>
         <app-standard-button
           (click)="scrollService.scrollTo('contact')"
           buttonText="{{ intro[0].button[languageService.currentLanguage] }}"
+          aria-label="Scroll to contact section"
         ></app-standard-button>
       </div>
     </div>
-    <div class="buttonsAlignment" data-aos="fade-up">
+
+    <nav
+      class="buttonsAlignment"
+      data-aos="fade-up"
+      role="navigation"
+      aria-label="External links"
+    >
       <div class="actionButtons">
-        <a href="https://github.com/valentino-strebel" target="_blank"
-          ><img
+        <a
+          href="https://github.com/valentino-strebel"
+          target="_blank"
+          aria-label="Visit Valentino Strebel's GitHub profile"
+        >
+          <img
             src="../../../assets/img/icons/8. Github button.svg"
-            alt="GitHub Link"
-        /></a>
-        <a href="mailto:office@strebel-company.de" target="_blank"
-          ><img
+            alt="GitHub logo"
+          />
+        </a>
+
+        <a
+          href="mailto:office@strebel-company.de"
+          target="_blank"
+          aria-label="Send an email to Valentino Strebel"
+        >
+          <img
             src="../../../assets/img/icons/9. Email button.svg"
-            alt="Email Link"
-        /></a>
+            alt="Email icon"
+          />
+        </a>
+
         <a
           href="https://linkedin.com/in/valentino-guido-strebel"
           target="_blank"
-          ><img
+          aria-label="Visit Valentino Strebel's LinkedIn profile"
+        >
+          <img
             src="../../../assets/img/icons/10. Linkedin button.svg"
-            alt="LinkedIn Link"
-        /></a>
+            alt="LinkedIn logo"
+          />
+        </a>
+
         <a
           class="noTransform"
           href="mailto:office@strebel-company.de"
           target="_blank"
-          >{{ intro[0].mail }}</a
+          aria-label="Email link with visible address"
         >
-        <div class="purpleLine"></div>
+          {{ intro[0].mail }}
+        </a>
+
+        <div class="purpleLine" aria-hidden="true"></div>
       </div>
-    </div>
+    </nav>
   </div>
-</div>
+</section>

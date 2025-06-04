@@ -1,18 +1,32 @@
-<header>
+<header role="banner">
   <div class="headerContainer flexSpaceBetween">
-    <div class="burgerMenu" (click)="nextImage()">
-      <img [src]="images[currentImage]" alt="Image" width="300" />
+    <div
+      class="burgerMenu"
+      (click)="nextImage()"
+      tabindex="0"
+      role="button"
+      aria-label="Next image"
+      (keydown.enter)="nextImage()"
+      (keydown.space)="nextImage()"
+    >
+      <img [src]="images[currentImage]" alt="Slideshow image" width="300" />
     </div>
+
     <a
       [routerLink]="'home'"
       class="logoButton"
       (click)="displayService.pageChange('home'); scrollService.scrollToTop()"
-      ><app-company-logo></app-company-logo
-    ></a>
+      aria-label="Go to homepage"
+    >
+      <app-company-logo></app-company-logo>
+    </a>
+
     <div
       class="headerMenu"
       [ngClass]="{ hideMenu: direction === -1 }"
       (click)="changeDirection()"
+      role="navigation"
+      aria-label="Main navigation"
     >
       <nav class="pageNavigationButtons flexSpaceBetween">
         <button
@@ -22,9 +36,11 @@
           "
           class="size23"
           [ngClass]="{ activeSel: scrollService.currentSelection === 'about' }"
+          aria-label="Go to About section"
         >
           {{ headerBtn[0].about[languageService.currentLanguage] }}
         </button>
+
         <button
           (click)="
             scrollService.scrollTo('skills');
@@ -32,9 +48,11 @@
           "
           class="size23"
           [ngClass]="{ activeSel: scrollService.currentSelection === 'skill' }"
+          aria-label="Go to Skills section"
         >
           {{ headerBtn[0].skill[languageService.currentLanguage] }}
         </button>
+
         <button
           (click)="
             scrollService.scrollTo('portfolio');
@@ -42,9 +60,11 @@
           "
           class="size23"
           [ngClass]="{ activeSel: scrollService.currentSelection === 'port' }"
+          aria-label="Go to Portfolio section"
         >
           {{ headerBtn[0].port[languageService.currentLanguage] }}
         </button>
+
         <button
           (click)="
             scrollService.scrollTo('contact');
@@ -54,24 +74,29 @@
           [ngClass]="{
             activeSel: scrollService.currentSelection === 'contact'
           }"
+          aria-label="Go to Contact section"
         >
           {{ headerBtn[0].contact[languageService.currentLanguage] }}
         </button>
       </nav>
-      <div class="languageButtons">
+
+      <div class="languageButtons" role="group" aria-label="Language selection">
         <button
-          [id]="'btnGer'"
+          id="btnGer"
           (click)="languageService.langChange('de')"
           class="size18"
           [ngClass]="{ activeLang: languageService.currentLanguage === 'de' }"
+          aria-label="Switch to German"
         >
           DE
         </button>
+
         <button
-          [id]="'btnEng'"
+          id="btnEng"
           (click)="languageService.langChange('en')"
           class="size18"
           [ngClass]="{ activeLang: languageService.currentLanguage === 'en' }"
+          aria-label="Switch to English"
         >
           EN
         </button>

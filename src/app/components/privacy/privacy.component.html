@@ -1,25 +1,32 @@
-<section class="privacy">
+<section class="privacy" aria-labelledby="privacy-title">
   <div class="privacyContainer">
-    <h2>
+    <h2 id="privacy-title">
       {{ privacy[0].section[languageService.currentLanguage] }}
     </h2>
 
-    <h3>1. {{ privacy[0].resp[languageService.currentLanguage] }}</h3>
+    <h3 id="responsible-party">
+      1. {{ privacy[0].resp[languageService.currentLanguage] }}
+    </h3>
     <p>
-      {{ privacy[0].resp1[languageService.currentLanguage] }}
-      <br />
+      {{ privacy[0].resp1[languageService.currentLanguage] }}<br />
       <strong>Valentino Strebel / Strebel Company</strong><br />
       Dorfstraße 12a, 85375, Neufahrn b. Freising<br />
-      <a href="mailto:office@strebel-company.de">{{ privacy[0].respEmail }}</a
+      <a
+        href="mailto:office@strebel-company.de"
+        aria-label="Email: office@strebel-company.de"
+      >
+        {{ privacy[0].respEmail }} </a
       ><br />
-      +49 171 1505613
+      <span aria-label="Phone number: +49 171 1505613">+49 171 1505613</span>
     </p>
 
     <h3>2. {{ privacy[0].use[languageService.currentLanguage] }}</h3>
 
-    <h4>{{ privacy[0].contact[languageService.currentLanguage] }}</h4>
+    <h4>
+      {{ privacy[0].contact[languageService.currentLanguage] }}
+    </h4>
     <p>
-      {{ privacy[0].contact1[languageService.currentLanguage] }} <br /><br />
+      {{ privacy[0].contact1[languageService.currentLanguage] }}<br /><br />
       <strong>{{ privacy[0].contact2[languageService.currentLanguage] }}</strong
       ><br /><br />
       {{ privacy[0].contact3[languageService.currentLanguage] }}

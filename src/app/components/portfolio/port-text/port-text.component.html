@@ -1,33 +1,40 @@
 <div class="portFullDesc">
-  <img *ngIf="imageUrl" [src]="imageUrl" alt="Project Image" />
+  <ng-container *ngIf="imageUrl">
+    <img [src]="imageUrl" [alt]="projectName + ' screenshot'" />
+  </ng-container>
 
   <div class="portDescBtn">
     <div class="portText gap15">
-      <p class="size32 weight700 purpleColor">
+      <h2 class="size32 weight700 purpleColor">
         {{ projectName }}
-      </p>
-      <p class="size23 greenColor">
+      </h2>
+      <h3 class="size23 greenColor">
         {{ projectTech }}
-      </p>
+      </h3>
       <p class="size16">
         {{ projectDesc }}
       </p>
     </div>
-    <div class="portButtons">
+
+    <nav class="portButtons" aria-label="Project links">
       <a
-        href="{{ projectLive }}"
+        [href]="projectLive"
         target="_blank"
         rel="noopener noreferrer"
         class="live"
-        >Live test</a
+        [attr.aria-label]="'Visit live version of ' + projectName"
       >
+        Live test
+      </a>
       <a
-        href="{{ projectGit }}"
+        [href]="projectGit"
         target="_blank"
         rel="noopener noreferrer"
         class="git"
-        >Github</a
+        [attr.aria-label]="'View GitHub repository for ' + projectName"
       >
-    </div>
+        GitHub
+      </a>
+    </nav>
   </div>
 </div>

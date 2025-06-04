@@ -1,34 +1,64 @@
-<footer>
+<footer aria-label="Site footer">
   <div class="footerContainer">
     <div class="footerMain">
       <div class="nameLegalNotice">
-        <div class="logoButton" (click)="scrollService.scrollToTop()">
-          <app-company-logo></app-company-logo>
-        </div>
+        <button
+          class="logoButton"
+          type="button"
+          (click)="scrollService.scrollToTop()"
+          aria-label="Scroll to top"
+        >
+          <app-company-logo aria-hidden="true"></app-company-logo>
+        </button>
       </div>
+
       <div class="copyright">
-        <p class="size23">&#169; Strebel Company 2025</p>
+        <p class="size23" aria-label="Copyright notice">
+          &copy; Strebel Company 2025
+        </p>
       </div>
-      <div class="footerButtons flexSpaceBetween gap29">
-        <a href="https://github.com/valentino-strebel" target="_blank"
-          ><img
+
+      <nav
+        class="footerButtons flexSpaceBetween gap29"
+        aria-label="Social media links"
+      >
+        <a
+          href="https://github.com/valentino-strebel"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Valentino Strebel's GitHub profile"
+        >
+          <img
             src="../../../assets/img/icons/8. Github button.svg"
-            alt="GitHub Link"
-        /></a>
-        <a href="mailto:office@strebel-company.de" target="_blank"
-          ><img
+            alt="GitHub icon"
+          />
+        </a>
+
+        <a
+          href="mailto:office@strebel-company.de"
+          target="_blank"
+          aria-label="Send an email to office@strebel-company.de"
+        >
+          <img
             src="../../../assets/img/icons/9. Email button.svg"
-            alt="Email Link"
-        /></a>
+            alt="Email icon"
+          />
+        </a>
+
         <a
           href="https://linkedin.com/in/valentino-guido-strebel"
           target="_blank"
-          ><img
+          rel="noopener noreferrer"
+          aria-label="Visit Valentino Guido Strebel's LinkedIn profile"
+        >
+          <img
             src="../../../assets/img/icons/10. Linkedin button.svg"
-            alt="LinkedIn Link"
-        /></a>
-      </div>
+            alt="LinkedIn icon"
+          />
+        </a>
+      </nav>
     </div>
+
     <div class="privacy">
       <a
         [routerLink]="'/privacy-policy'"
@@ -38,9 +68,12 @@
           scrollService.scrollToTop();
           scrollService.selectionChange('none')
         "
-        >{{ footer[0].data[languageService.currentLanguage] }}</a
+        aria-label="View Privacy Policy page"
       >
+        {{ footer[0].data[languageService.currentLanguage] }}
+      </a>
     </div>
+
     <div class="privacy">
       <a
         [routerLink]="'/impress'"
@@ -50,8 +83,10 @@
           scrollService.scrollToTop();
           scrollService.selectionChange('none')
         "
-        >{{ footer[0].impress[languageService.currentLanguage] }}</a
+        aria-label="View Impressum page"
       >
+        {{ footer[0].impress[languageService.currentLanguage] }}
+      </a>
     </div>
   </div>
 </footer>

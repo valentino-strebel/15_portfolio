@@ -1,24 +1,38 @@
-<div class="skillsList">
-  <div *ngFor="let skill of skills; let i = index" class="skillItem">
+<div class="skillsList" role="list">
+  <div
+    *ngFor="let skill of skills; let i = index"
+    class="skillItem"
+    role="listitem"
+    tabindex="0"
+    (focus)="onMouseEnter(i)"
+    (mouseenter)="onMouseEnter(i)"
+    [attr.aria-label]="skill.text"
+  >
     <img
       [src]="skill.image"
-      alt="{{ skill.text }}"
+      [alt]="skill.text"
       class="object"
       [class.moved]="movedIndex === i"
-      (mouseenter)="onMouseEnter(i)"
     />
     <p class="skillText">{{ skill.text }}</p>
   </div>
-  <div class="purpleSkill">
+
+  <div
+    class="purpleSkill"
+    role="listitem"
+    tabindex="0"
+    aria-label="Continually learning"
+  >
     <div class="purpleImage">
       <img
         src="../../../../assets/img/icons/icon_plain/front/continual_purple.svg"
-        alt=""
+        alt="Background for continual learning"
         class="default-image"
+        aria-hidden="true"
       />
       <img
         src="../../../../assets/img/icons/icon_plain/front/cont_learn_plain.svg"
-        alt=""
+        alt="Continually learning icon"
         class="hover-image"
       />
       <p class="skillText">Continually learning</p>

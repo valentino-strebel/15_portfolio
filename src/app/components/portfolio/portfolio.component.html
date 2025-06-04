@@ -1,21 +1,22 @@
 <div class="portfolio">
   <div class="portfolioContainer">
-    <div class="headerPosition">
+    <header class="headerPosition">
       <div class="headlineRelative">
         <div class="headline">
-          <p>Portfolio</p>
-          <div class="purpleLineLeft"></div>
-          <div class="purpleLineRight"></div>
+          <h2>Portfolio</h2>
+          <div class="purpleLineLeft" aria-hidden="true"></div>
+          <div class="purpleLineRight" aria-hidden="true"></div>
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="portfolioHeader">
+    <section class="portfolioHeader">
       <p class="size16">
         {{ subheader[0].line[languageService.currentLanguage] }}
       </p>
-    </div>
-    <div *ngFor="let project of projects; let i = index" data-aos="zoom-in">
+    </section>
+
+    <section *ngFor="let project of projects; let i = index" data-aos="zoom-in">
       <app-port-text
         [ngClass]="{ 'reverse-layout': isWideScreen && i % 2 !== 0 }"
         [imageUrl]="project.img"
@@ -25,28 +26,34 @@
         [projectLive]="project.gameUrl"
         [projectGit]="project.gitUrl"
       ></app-port-text>
-    </div>
-    <div class="website" data-aos="flip-up">
+    </section>
+
+    <section class="website" data-aos="flip-up">
       <div class="portText gap15">
-        <p class="size32 weight700 purpleColor">
+        <h3 class="size32 weight700 purpleColor">
           {{ website[0].name[languageService.currentLanguage] }}
-        </p>
-        <p class="size23 greenColor">
+        </h3>
+        <h4 class="size23 greenColor">
           {{ website[0].tech }}
-        </p>
+        </h4>
         <p class="size16">
           {{ website[0].desc[languageService.currentLanguage] }}
         </p>
       </div>
       <div class="portButtons">
         <a
-          href="{{ website[0].gitUrl }}"
+          [href]="website[0].gitUrl"
           target="_blank"
           rel="noopener noreferrer"
           class="git"
-          >Github</a
+          [attr.aria-label]="
+            'View GitHub repository for ' +
+            website[0].name[languageService.currentLanguage]
+          "
         >
+          GitHub
+        </a>
       </div>
-    </div>
+    </section>
   </div>
 </div>

@@ -16,6 +16,10 @@ export class ReferenceComponent implements AfterViewInit {
   ngAfterViewInit() {
     AOS.refresh();
   }
+  selectItem(index: number) {
+    this.currentIndex = index;
+    this.currentSymbol = 'symbol-' + index;
+  }
 
   fade: boolean = false;
 
