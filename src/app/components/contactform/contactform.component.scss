@@ -8,6 +8,11 @@ input:-webkit-autofill {
   caret-color: white;
 }
 
+h1 {
+  font-size: 90px;
+  font-weight: 700;
+}
+
 .contact {
   padding: $screenPadding;
 }
@@ -213,7 +218,7 @@ a {
     padding: $mobilePadding;
   }
 
-  .headline p {
+  .headline h1 {
     font-size: 45px;
   }
 
