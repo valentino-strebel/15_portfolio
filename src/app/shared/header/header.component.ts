@@ -1,7 +1,6 @@
 import { Component, Injectable } from '@angular/core';
-import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { LanguageService } from '../language.service';
-import { ScrollService, Section } from '../scroll.service';
+import { ScrollService } from '../scroll.service';
 import { CommonModule } from '@angular/common';
 import { DisplayService } from '../display.service';
 import { RouterLink } from '@angular/router';
@@ -12,7 +11,7 @@ import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CompanyLogoComponent, CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

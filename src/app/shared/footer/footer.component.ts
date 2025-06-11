@@ -1,5 +1,4 @@
 import { Component, AfterViewInit } from '@angular/core';
-import { CompanyLogoComponent } from '../company-logo/company-logo.component';
 import { ScrollService } from '../scroll.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DisplayService } from '../display.service';
@@ -9,7 +8,7 @@ import * as AOS from 'aos';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [CompanyLogoComponent, RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
