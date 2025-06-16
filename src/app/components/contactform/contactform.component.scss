@@ -161,7 +161,9 @@ form {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  cursor: pointer;
+  img {
+    cursor: pointer;
+  }
 }
 
 .invalid {
