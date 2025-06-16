@@ -4,23 +4,35 @@
       {{ privacy[0].section[languageService.currentLanguage] }}
     </h2>
 
+    <h3>1. {{ privacy[0].general[languageService.currentLanguage] }}</h3>
+    <p>{{ privacy[0].generalDesc[languageService.currentLanguage] }}</p>
     <h3 id="responsible-party">
-      1. {{ privacy[0].resp[languageService.currentLanguage] }}
+      2. {{ privacy[0].resp[languageService.currentLanguage] }}
     </h3>
     <p>
       {{ privacy[0].resp1[languageService.currentLanguage] }}<br />
-      <strong>Valentino Strebel / Strebel Company</strong><br />
-      Dorfstraße 12a, 85375, Neufahrn b. Freising<br />
+      <strong>Strebel Company</strong><br />
+      <strong>
+        {{ privacy[0].controllerData.owner[languageService.currentLanguage] }}
+      </strong>
+      Valentino Strebel<br />
+      Dorfstraße 12a<br />
+      85375 Neufahrn b. Freising<br />
+      {{ privacy[0].controllerData.country[languageService.currentLanguage]
+      }}<br />
+      Email:
       <a
         href="mailto:office@strebel-company.de"
         aria-label="Email: office@strebel-company.de"
       >
         {{ privacy[0].respEmail }} </a
       ><br />
-      <span aria-label="Phone number: +49 171 1505613">+49 171 1505613</span>
+      <span aria-label="Phone number: +49 171 1505613">
+        Tel: +49 171 1505613
+      </span>
     </p>
 
-    <h3>2. {{ privacy[0].use[languageService.currentLanguage] }}</h3>
+    <h3>3. {{ privacy[0].use[languageService.currentLanguage] }}</h3>
 
     <h4>
       {{ privacy[0].contact[languageService.currentLanguage] }}
@@ -32,12 +44,15 @@
       {{ privacy[0].contact3[languageService.currentLanguage] }}
     </p>
 
-    <h3>3. {{ privacy[0].store[languageService.currentLanguage] }}</h3>
+    <h3>4. Hosting</h3>
+    <p>{{ privacy[0].hosting[languageService.currentLanguage] }}</p>
+
+    <h3>5. {{ privacy[0].store[languageService.currentLanguage] }}</h3>
     <p>
       {{ privacy[0].store1[languageService.currentLanguage] }}
     </p>
 
-    <h3>4. {{ privacy[0].rights[languageService.currentLanguage] }}</h3>
+    <h3>6. {{ privacy[0].rights[languageService.currentLanguage] }}</h3>
     <p>
       {{ privacy[0].rights1[languageService.currentLanguage] }}
     </p>
@@ -51,11 +66,31 @@
     </ul>
     <p>
       {{ privacy[0].rights2[languageService.currentLanguage] }}
+      <a
+        href="mailto:office@strebel-company.de"
+        aria-label="Email: office@strebel-company.de"
+      >
+        {{ privacy[0].respEmail }}
+      </a>
     </p>
 
-    <h3>5. {{ privacy[0].encrypt[languageService.currentLanguage] }}</h3>
+    <h3>7. {{ privacy[0].encrypt[languageService.currentLanguage] }}</h3>
     <p>
       {{ privacy[0].encrypt1[languageService.currentLanguage] }}
     </p>
+
+    <h3>8. {{ privacy[0].forward.title[languageService.currentLanguage] }}</h3>
+    <p>{{ privacy[0].forward.desc[languageService.currentLanguage] }}</p>
+
+    <h3>
+      9. {{ privacy[0].complaint.title[languageService.currentLanguage] }}
+    </h3>
+    <p>{{ privacy[0].complaint.desc[languageService.currentLanguage] }}</p>
+
+    <h3>10. {{ privacy[0].cookies.title[languageService.currentLanguage] }}</h3>
+    <p>{{ privacy[0].cookies.desc[languageService.currentLanguage] }}</p>
+
+    <h3>11. {{ privacy[0].changes.title[languageService.currentLanguage] }}</h3>
+    <p>{{ privacy[0].changes.desc[languageService.currentLanguage] }}</p>
   </div>
 </section>
