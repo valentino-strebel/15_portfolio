@@ -44,6 +44,17 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   ];
   projects = [
     {
+      img: '../../assets/img/display/noteit.png',
+      name: 'Note It',
+      desc: {
+        en: 'Note It is a lightweight notes app designed for both local and cloud-based use. Built to experiment with JSON-style data storage, it uses MariaDB on a Raspberry Pi for local access, and Google Firebase Realtime Database for real-time syncing and public access. It offers a simple interface for creating, editing, and managing notes efficiently.',
+        de: 'Note It ist eine leichtgewichtige Notizen-App, die sowohl für den lokalen als auch für den cloudbasierten Einsatz entwickelt wurde. Sie wurde als Experiment zur Nutzung von JSON-ähnlicher Datenspeicherung konzipiert und verwendet MariaDB auf einem Raspberry Pi für den lokalen Zugriff sowie die Google Firebase Realtime Database für die Echtzeitsynchronisation und öffentlichen Zugriff. Die App bietet eine einfache Oberfläche zum Erstellen, Bearbeiten und Verwalten von Notizen.',
+      },
+      tech: 'HTML | CSS | JS | Node.js | Express | MariaDB | Raspberry Pi | Firebase Realtime DB | Firebase JS SDK',
+      gameUrl: 'https://port4.strebel-company.de/index.html',
+      gitUrl: 'https://github.com/valentino-strebel/18_note_it',
+    },
+    {
       img: '../../assets/img/display/join.svg',
       name: 'Join',
       desc: {
@@ -75,17 +86,6 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
       tech: 'HTML | CSS | JS | API',
       gameUrl: 'https://port2.strebel-company.de',
       gitUrl: 'https://github.com/valentino-strebel/9_pokedex',
-    },
-    {
-      img: '../../assets/img/display/noteit.png',
-      name: 'Note It',
-      desc: {
-        en: 'Note It is a lightweight notes app designed for both local and cloud-based use. Built to experiment with JSON-style data storage, it uses MariaDB on a Raspberry Pi for local access, and Google Firebase Realtime Database for real-time syncing and public access. It offers a simple interface for creating, editing, and managing notes efficiently.',
-        de: 'Note It ist eine leichtgewichtige Notizen-App, die sowohl für den lokalen als auch für den cloudbasierten Einsatz entwickelt wurde. Sie wurde als Experiment zur Nutzung von JSON-ähnlicher Datenspeicherung konzipiert und verwendet MariaDB auf einem Raspberry Pi für den lokalen Zugriff sowie die Google Firebase Realtime Database für die Echtzeitsynchronisation und öffentlichen Zugriff. Die App bietet eine einfache Oberfläche zum Erstellen, Bearbeiten und Verwalten von Notizen.',
-      },
-      tech: 'HTML | CSS | JS | Node.js | Express | MariaDB | Raspberry Pi | Firebase Realtime DB | Firebase JS SDK',
-      gameUrl: 'https://port4.strebel-company.de/index.html',
-      gitUrl: 'https://github.com/valentino-strebel/18_note_it',
     },
   ];
 
