@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   background: linear-gradient(to bottom, #27334b, #141d2f) !important;
+  // background: $background;
 }
 
 .introContainer {
@@ -20,7 +21,7 @@
 .purpleLine {
   width: 100vw;
   position: absolute;
-  background-color: $activeClick;
+  background-color: $background;
   height: 4px;
   top: 50%;
   left: -15px;
@@ -57,7 +58,7 @@
 
 .profession {
   font-size: 64px;
-  color: $activeClick;
+  color: $primaryAccent;
   text-transform: uppercase;
 }
 

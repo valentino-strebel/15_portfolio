@@ -1,12 +1,12 @@
 @import "../../variables";
 
 .skillsContainer {
-  padding: $screenPadding;
   max-width: 1440px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: $screenPadding;
 }
 
 @media (max-width: 1600px) {

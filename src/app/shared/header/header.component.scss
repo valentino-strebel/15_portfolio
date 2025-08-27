@@ -5,7 +5,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #141d2f;
+  background-color: $background;
 }
 
 .companyLogo {
@@ -49,14 +49,14 @@ header {
   button,
   a {
     &:hover {
-      color: $hoverFocus;
+      color: $primaryAccent;
     }
   }
 }
 
 .activeSel {
-  color: $hoverFocus;
-  text-decoration: underline solid $activeClick 4px;
+  color: $primaryColor;
+  text-decoration: underline solid $primaryAccent 4px;
   text-underline-offset: 12px;
 }
 
@@ -73,18 +73,18 @@ button {
   gap: 15px;
   button {
     border-radius: 10px;
-    border: 1px solid $hoverFocus;
+    border: 1px solid $primaryColor;
     padding: 5px 8px;
     &:hover {
-      background-color: $activeClick;
+      background-color: $primaryAccent;
       color: white;
-      border-color: $activeClick;
+      border-color: $primaryAccent;
     }
   }
 }
 
 .activeLang {
-  background-color: $hoverFocus;
+  background-color: $primaryColor;
   color: white;
   font-weight: 700;
 }

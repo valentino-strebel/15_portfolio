@@ -1,23 +1,28 @@
 @import "./app/variables";
+@import "aos/dist/aos.css";
 
 html {
   scroll-behavior: smooth;
-  background-color: $standardBlue;
+  background-color: $background;
   scroll-padding-top: 124px;
 }
 
 * {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  color: #ffffff;
+  color: $text;
 }
 
 .purpleColor {
-  color: $activeClick;
+  color: $primaryAccent;
 }
 
 .greenColor {
-  color: $hoverFocus;
+  color: $primaryColor;
+}
+
+.modernColor {
+  color: $secondaryAccent;
 }
 
 .flexSpaceBetween {

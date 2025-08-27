@@ -44,6 +44,10 @@
   opacity: 0;
 }
 
+.width60 {
+  width: 60px;
+}
+
 .purpleImage {
   position: absolute;
   left: 50%;
@@ -80,7 +84,7 @@
 
 .purpleImage p {
   transition: color 0.5s ease-in-out;
-  color: $activeClick;
+  color: $primaryAccent;
 }
 
 .skillText {

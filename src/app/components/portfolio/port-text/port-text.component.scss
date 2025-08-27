@@ -42,10 +42,10 @@
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: $hoverFocus;
+      background-color: $primaryColor;
     }
     &.live:active {
-      background-color: $activeClick;
+      background-color: $primaryAccent;
     }
     &.git:active {
       background-color: transparent;
@@ -58,11 +58,11 @@
 
 .live {
   border: none;
-  background-color: $activeClick;
+  background-color: $primaryAccent;
 }
 
 .git {
-  border: 1px solid $hoverFocus;
+  border: 1px solid $primaryColor;
 }
 
 .portDescBtn {

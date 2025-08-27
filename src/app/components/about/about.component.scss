@@ -43,7 +43,7 @@ h2 {
   img {
     width: 453px;
     height: 453px;
-    border: 4px solid $hoverFocus;
+    border: 4px solid $primaryColor;
     border-radius: 100%;
     object-fit: contain;
   }
@@ -52,7 +52,7 @@ h2 {
 .greenLine {
   width: 100vw;
   position: absolute;
-  background-color: $hoverFocus;
+  background-color: $primaryColor;
   height: 4px;
   top: 50%;
   right: 0;

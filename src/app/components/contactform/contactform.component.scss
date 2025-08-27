@@ -30,7 +30,7 @@ h1 {
 .purpleLine {
   width: 100vw;
   position: absolute;
-  background-color: $activeClick;
+  background-color: $secondaryAccent;
   height: 4px;
   top: 50%;
   left: -15px;
@@ -38,7 +38,7 @@ h1 {
 }
 
 .confirm {
-  color: $hoverFocus;
+  color: $primaryColor;
   text-align: center;
   transform: translateX(100%);
   transition: transform 0.2s ease-in-out;
@@ -61,7 +61,7 @@ select,
 textarea {
   width: 100%;
   padding: 15px 25px;
-  border: 1px solid $activeClick;
+  border: 1px solid $secondaryAccent;
   border-radius: 10px;
   box-sizing: border-box;
   resize: vertical;
@@ -78,7 +78,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-  border: 1px solid $activeClick;
+  border: 1px solid $primaryAccent;
   outline: none;
 }
 
@@ -99,7 +99,7 @@ input[type="checkbox"] {
   background-color: transparent;
   flex-shrink: 0;
 
-  border: 1px solid $hoverFocus;
+  border: 1px solid $primaryColor;
   appearance: none;
   cursor: pointer;
   width: 18px;
@@ -107,7 +107,7 @@ input[type="checkbox"] {
   position: relative;
   &:checked::after {
     content: "✔";
-    color: $hoverFocus;
+    color: $primaryColor;
     font-size: 16px;
     position: absolute;
     top: 50%;
@@ -201,9 +201,9 @@ span {
 a {
   cursor: pointer;
   text-decoration: none;
-  color: $activeClick;
+  color: $primaryAccent;
   &:hover {
-    text-decoration: underline solid $hoverFocus 2px;
+    text-decoration: underline solid $primaryColor 2px;
     text-underline-offset: 4px;
   }
 }
