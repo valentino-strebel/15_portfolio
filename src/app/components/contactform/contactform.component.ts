@@ -7,7 +7,7 @@ import { ScrollService } from '../../shared/scroll.service';
 import { DisplayService } from '../../shared/display.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import * as AOS from 'aos';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-contactform',

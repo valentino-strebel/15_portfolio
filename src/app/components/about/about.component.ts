@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { LanguageService } from '../../shared/language.service';
-import * as AOS from 'aos';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-about',

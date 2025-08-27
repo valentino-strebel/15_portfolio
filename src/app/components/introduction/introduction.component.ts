@@ -3,7 +3,7 @@ import { LanguageService } from '../../shared/language.service';
 import { StandardButtonComponent } from '../../shared/standard-button/standard-button.component';
 import { CommonModule } from '@angular/common';
 import { ScrollService } from '../../shared/scroll.service';
-import * as AOS from 'aos';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-introduction',

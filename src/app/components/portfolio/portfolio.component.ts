@@ -2,7 +2,7 @@ import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { PortTextComponent } from './port-text/port-text.component';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../shared/language.service';
-import * as AOS from 'aos';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-portfolio',

@@ -9,7 +9,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   standalone: true,
   imports: [RouterOutlet, HeaderComponent, FooterComponent],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'], // ✅ plural
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
   title = 'Strebel Company';
@@ -17,11 +17,10 @@ export class AppComponent implements AfterViewInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
-    // Only run in the browser (avoids "document is not defined" on the server)
     if (!isPlatformBrowser(this.platformId)) return;
 
-    // Dynamically import so the AOS bundle isn't even loaded during SSR
-    import('aos').then((AOS) => {
+    (async () => {
+      const AOS = (await import('aos')).default; // <-- get default export
       AOS.init({
         once: false,
         mirror: false,
@@ -29,8 +28,7 @@ export class AppComponent implements AfterViewInit {
         easing: 'ease-out',
       });
 
-      // Defer a tick so the DOM is fully painted before refreshing
       setTimeout(() => AOS.refresh(), 100);
-    });
+    })();
   }
 }

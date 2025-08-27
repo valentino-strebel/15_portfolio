@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { SkillLogosComponent } from './skill-logos/skill-logos.component';
 import { SkillDescriptionComponent } from './skill-description/skill-description.component';
-import * as AOS from 'aos';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-skills',

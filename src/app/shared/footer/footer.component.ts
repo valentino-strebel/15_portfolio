@@ -3,7 +3,7 @@ import { ScrollService } from '../scroll.service';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { DisplayService } from '../display.service';
 import { LanguageService } from '../language.service';
-import * as AOS from 'aos';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-footer',
