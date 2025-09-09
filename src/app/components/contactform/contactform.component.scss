@@ -107,7 +107,7 @@ input[type="checkbox"] {
   position: relative;
   &:checked::after {
     content: "✔";
-    color: $primaryColor;
+    color: $primaryAccent;
     font-size: 16px;
     position: absolute;
     top: 50%;
