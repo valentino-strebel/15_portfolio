@@ -13,7 +13,7 @@ header {
 }
 
 .headerContainer {
-  padding: 37px 100px;
+  padding: 16px 100px;
   max-width: 1440px;
   margin: auto;
   position: relative;
@@ -136,7 +136,7 @@ button {
 
 @media (max-width: 1000px) {
   .headerContainer {
-    padding: 37px 25px;
+    padding: 16px 25px;
   }
 
   .burgerMenu {
