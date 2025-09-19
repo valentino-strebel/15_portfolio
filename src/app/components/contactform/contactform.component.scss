@@ -203,7 +203,7 @@ a {
   text-decoration: none;
   color: $primaryAccent;
   &:hover {
-    text-decoration: underline solid $primaryColor 2px;
+    text-decoration: underline solid $primaryAccent 2px;
     text-underline-offset: 4px;
   }
 }
