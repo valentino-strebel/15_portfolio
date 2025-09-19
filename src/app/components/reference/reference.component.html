@@ -7,7 +7,11 @@
   <div class="referenceContainer">
     <figure class="referenceText">
       <blockquote>
-        <p class="referenceTextcontent" [class.fade]="fade" aria-live="polite">
+        <p
+          class="referenceTextcontent italics"
+          [class.fade]="fade"
+          aria-live="polite"
+        >
           {{ galleryItems[currentIndex].text[languageService.currentLanguage] }}
         </p>
       </blockquote>
