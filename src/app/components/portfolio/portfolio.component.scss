@@ -127,6 +127,41 @@
   border: 1px solid $primaryColor;
 }
 
+.active-class {
+  display: none;
+}
+
+.portfolioButton {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+  border-radius: 100%;
+  cursor: pointer;
+  &:hover {
+    background-color: $primaryAccent;
+  }
+  &:active {
+    background-color: $secondaryAccent;
+  }
+}
+
+.close {
+  background-image: url(../../../assets/img/icons/arrow_port/up.svg);
+}
+
+.open {
+  background-image: url(../../../assets/img/icons/arrow_port/down.svg);
+}
+
+.showPortButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 1300px) {
   .portText {
     text-align: center;

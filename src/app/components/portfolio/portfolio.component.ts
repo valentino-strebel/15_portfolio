@@ -14,6 +14,8 @@ import AOS from 'aos';
 export class PortfolioComponent implements OnInit, AfterViewInit {
   constructor(public languageService: LanguageService) {}
 
+  isActive = true;
+
   isWideScreen: boolean = false;
 
   ngOnInit() {
@@ -22,6 +24,15 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     AOS.refresh();
+  }
+
+  changeBool() {
+    this.isActive = !this.isActive;
+
+    if (this.isActive) {
+      const element = document.getElementById('portCollection');
+      element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   @HostListener('window:resize', ['$event'])
@@ -37,8 +48,8 @@ export class PortfolioComponent implements OnInit, AfterViewInit {
   subheader = [
     {
       line: {
-        en: 'Explore a selection of our work – interact with the projects to see our skills in action.',
-        de: 'Entdecken Sie eine Auswahl unserer Arbeiten – interagieren Sie mit den Projekten, um unsere Fähigkeiten in Aktion zu erleben.',
+        en: '"Discover our portfolio"',
+        de: '„Unser Portfolio entdecken“',
       },
     },
   ];

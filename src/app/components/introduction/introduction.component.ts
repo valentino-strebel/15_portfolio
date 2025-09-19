@@ -29,7 +29,7 @@ export class IntroductionComponent implements AfterViewInit {
         en: 'Business Consulting & Software Development',
         de: 'Business Consulting & Software Development',
       },
-      button: { en: "Let's talk", de: 'Schreiben Sie uns' },
+      button: { en: 'Contact us!', de: 'Schreiben Sie uns!' },
       mail: 'office@strebel-company.de',
     },
   ];

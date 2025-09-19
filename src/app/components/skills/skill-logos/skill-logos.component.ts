@@ -22,44 +22,24 @@ export class SkillLogosComponent {
 
   skills = [
     {
-      image: '../../assets/img/icons/icon_plain/front/html_plain.svg',
-      text: 'HTML',
+      image: '../../assets/img/icons/icon_plain/free/project.svg',
+      text: 'Project Management',
     },
     {
-      image: '../../assets/img/icons/icon_plain/front/css_plain.svg',
-      text: 'CSS',
+      image: '../../assets/img/icons/icon_plain/free/analysis.svg',
+      text: 'Business Analysis',
     },
     {
-      image: '../../assets/img/icons/icon_plain/front/js_plain.svg',
-      text: 'JavaScript',
+      image: '../../assets/img/icons/icon_plain/free/process.svg',
+      text: 'Process Management',
     },
     {
-      image: '../../assets/img/icons/icon_plain/front/ts_plain.svg',
-      text: 'TypeScript',
+      image: '../../assets/img/icons/icon_plain/free/development.svg',
+      text: 'Software Development',
     },
     {
-      image: '../../assets/img/icons/icon_plain/front/ang_plain.svg',
-      text: 'Angular',
-    },
-    {
-      image: '../../assets/img/icons/icon_plain/front/fire_plain.svg',
-      text: 'Firebase',
-    },
-    {
-      image: '../../assets/img/icons/icon_plain/front/api_plain.svg',
-      text: 'Rest Api',
-    },
-    {
-      image: '../../assets/img/icons/icon_plain/front/git_plain.svg',
-      text: 'Git',
-    },
-    {
-      image: '../../assets/img/icons/icon_plain/front/mat_des_plain.svg',
-      text: 'Material Design',
-    },
-    {
-      image: '../../assets/img/icons/icon_plain/front/scrum_plain.svg',
-      text: 'Scrum',
+      image: '../../assets/img/icons/icon_plain/free/requirements.svg',
+      text: 'Requirements Engineering',
     },
   ];
 }

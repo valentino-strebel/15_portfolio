@@ -50,8 +50,8 @@ export class ContactformComponent implements AfterViewInit {
         en: "We’re excited to collaborate on meaningful projects and bring real value to every team we partner with. If you're looking for a dedicated development team driven by impact and innovation — let’s connect!",
       },
       desc1: {
-        de: 'Suchen Sie einen zuverlässigen Entwicklungspartner?',
-        en: 'Looking for a reliable development partner?',
+        de: 'Suchen Sie einen zuverlässigen Partner?',
+        en: 'Looking for a reliable partner?',
       },
       desc2: { de: 'Kontaktieren Sie uns!', en: 'Contact us!' },
       name: { de: 'Ihr Name', en: 'Your name' },

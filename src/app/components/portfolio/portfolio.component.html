@@ -1,4 +1,4 @@
-<div class="portfolio">
+<div class="portfolio" id="portCollection">
   <div class="portfolioContainer">
     <header class="headerPosition">
       <div class="headlineRelative">
@@ -11,49 +11,68 @@
     </header>
 
     <section class="portfolioHeader">
-      <p class="size16">
+      <p class="size16 italics">
         {{ subheader[0].line[languageService.currentLanguage] }}
       </p>
     </section>
+    <div class="showPortButton">
+      <div
+        class="open portfolioButton"
+        *ngIf="isActive"
+        (click)="changeBool()"
+      ></div>
+      <div
+        (click)="changeBool()"
+        [ngClass]="{ 'active-class': isActive }"
+        class="close portfolioButton"
+      ></div>
+    </div>
+    <div [ngClass]="{ 'active-class': isActive }">
+      <section
+        *ngFor="let project of projects; let i = index"
+        data-aos="zoom-in"
+      >
+        <app-port-text
+          [ngClass]="{ 'reverse-layout': isWideScreen && i % 2 !== 0 }"
+          [imageUrl]="project.img"
+          [projectName]="project.name"
+          [projectDesc]="project.desc[languageService.currentLanguage]"
+          [projectTech]="project.tech"
+          [projectLive]="project.gameUrl"
+          [projectGit]="project.gitUrl"
+        ></app-port-text>
+      </section>
 
-    <section *ngFor="let project of projects; let i = index" data-aos="zoom-in">
-      <app-port-text
-        [ngClass]="{ 'reverse-layout': isWideScreen && i % 2 !== 0 }"
-        [imageUrl]="project.img"
-        [projectName]="project.name"
-        [projectDesc]="project.desc[languageService.currentLanguage]"
-        [projectTech]="project.tech"
-        [projectLive]="project.gameUrl"
-        [projectGit]="project.gitUrl"
-      ></app-port-text>
-    </section>
-
-    <section class="website" data-aos="flip-up">
-      <div class="portText gap15">
-        <h3 class="size32 weight700 purpleColor">
-          {{ website[0].name[languageService.currentLanguage] }}
-        </h3>
-        <h4 class="size23 greenColor">
-          {{ website[0].tech }}
-        </h4>
-        <p class="size16">
-          {{ website[0].desc[languageService.currentLanguage] }}
-        </p>
-      </div>
-      <div class="portButtons">
-        <a
-          [href]="website[0].gitUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="git"
-          [attr.aria-label]="
-            'View GitHub repository for ' +
-            website[0].name[languageService.currentLanguage]
-          "
-        >
-          GitHub
-        </a>
-      </div>
-    </section>
+      <section class="website" data-aos="flip-up">
+        <div class="portText gap15">
+          <h3 class="size32 weight700 purpleColor">
+            {{ website[0].name[languageService.currentLanguage] }}
+          </h3>
+          <h4 class="size23 greenColor">
+            {{ website[0].tech }}
+          </h4>
+          <p class="size16">
+            {{ website[0].desc[languageService.currentLanguage] }}
+          </p>
+        </div>
+        <div class="portButtons">
+          <a
+            [href]="website[0].gitUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="git"
+            [attr.aria-label]="
+              'View GitHub repository for ' +
+              website[0].name[languageService.currentLanguage]
+            "
+          >
+            GitHub
+          </a>
+        </div>
+        <div class="showPortButton">
+          <div class="close portfolioButton" (click)="changeBool()"></div>
+        </div>
+      </section>
+    </div>
   </div>
 </div>
