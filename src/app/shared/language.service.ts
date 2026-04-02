@@ -5,12 +5,12 @@ type Language = 'de' | 'en';
   providedIn: 'root',
 })
 export class LanguageService {
-  currentLanguage: Language = 'en';
+  currentLanguage: Language = 'de';
 
   constructor() {
     if (typeof window !== 'undefined') {
       const savedLanguage = localStorage.getItem(
-        'appLanguage'
+        'appLanguage',
       ) as Language | null;
       if (savedLanguage === 'en' || savedLanguage === 'de') {
         this.currentLanguage = savedLanguage;
