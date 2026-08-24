@@ -18,11 +18,11 @@ export class PrivacyComponent implements OnInit {
     {
       section: { de: 'Datenschutzerklärung', en: 'Privacy Policy' },
 
-      general: { de: 'Allgemeine Hinweise', en: 'Disclaimer' },
+      general: { de: 'Allgemeine Hinweise', en: 'General Information' },
 
       generalDesc: {
-        de: 'Der Schutz Ihrer persönlichen Daten ist uns ein besonderes Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung. Die Nutzung dieser Website ist in der Regel ohne Angabe personenbezogener Daten möglich. Soweit auf unserer Seite personenbezogene Daten (z.B. Name, E-Mail-Adresse) erhoben werden, erfolgt dies stets auf freiwilliger Basis.',
-        en: 'The protection of your personal data is very important to us. We treat your personal information confidentially and in accordance with the applicable data protection laws and this privacy policy. The use of this website is generally possible without providing personal data. If personal data (such as name or email address) is collected on our site, this is always done on a voluntary basis.',
+        de: 'Der Schutz Ihrer personenbezogenen Daten ist uns ein besonderes Anliegen. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den geltenden Datenschutzvorschriften sowie dieser Datenschutzerklärung. Beim Aufruf dieser Website werden technisch erforderliche Daten verarbeitet, die für die Bereitstellung und Sicherheit der Website notwendig sind. Personenbezogene Daten, die Sie uns über das Kontaktformular übermitteln, verarbeiten wir ausschließlich zur Bearbeitung Ihrer Anfrage und gegebenenfalls zur Anbahnung oder Durchführung eines Vertragsverhältnisses.',
+        en: 'The protection of your personal data is very important to us. We treat your personal data confidentially and in accordance with applicable data protection laws and this privacy policy. When you access this website, technically necessary data is processed in order to provide and secure the website. Personal data that you send to us via the contact form is processed solely for the purpose of handling your inquiry and, where applicable, for taking steps prior to entering into or performing a contract.',
       },
 
       resp: { de: 'Verantwortlicher', en: 'Controller' },
@@ -47,101 +47,116 @@ export class PrivacyComponent implements OnInit {
       contact: { de: 'Kontaktformular', en: 'Contact Form' },
 
       contact1: {
-        de: 'Wenn Sie uns per Formular Anfragen zukommen lassen, werden Ihre Angaben aus dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten (Name, E-Mail, Telefonnummer sowie Ihre Nachricht) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert.',
-        en: 'If you send us inquiries via the contact form, the information you provide in the form, including the contact details you enter (name, email, phone number, and your message), will be stored by us for the purpose of processing your inquiry and in case of follow-up questions',
+        de: 'Wenn Sie uns über das Kontaktformular eine Anfrage senden, verarbeiten wir die von Ihnen eingegebenen Daten (Name, E-Mail-Adresse und Nachricht), um Ihre Anfrage zu bearbeiten und gegebenenfalls Rückfragen zu beantworten. Die übermittelten Angaben werden an unser bei STRATO geführtes E-Mail-Postfach übermittelt und dort verarbeitet.',
+        en: 'If you send us an inquiry via the contact form, we process the data you enter (name, email address, and message) in order to handle your inquiry and, where necessary, respond to follow-up questions. The information you submit is sent to and processed in our email account hosted by STRATO.',
       },
 
       hosting: {
-        de: 'Diese Website wird bei der STRATO AG gehostet. Die dabei erhobenen Server-Logfiles (z. B. IP-Adresse, Datum, Uhrzeit, aufgerufene Seite) werden automatisch gespeichert und dienen der technischen Sicherheit. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Es besteht ein Auftragsverarbeitungsvertrag mit dem Hosting-Anbieter gemäß Art. 28 DSGVO.',
-        en: 'This website is hosted by STRATO AG. Server log files (e.g., IP address, date, time, accessed page) are automatically collected and stored for technical security purposes. The processing is based on Article 6(1)(f) of the GDPR. A data processing agreement has been concluded with the hosting provider in accordance with Article 28 of the GDPR. ',
+        de: 'Diese Website und unser E-Mail-Verkehr werden bei der STRATO GmbH, Otto-Ostrowski-Straße 7, 10249 Berlin, Deutschland, gehostet. Beim Aufruf der Website werden technisch erforderliche Server-Logdaten, insbesondere die IP-Adresse sowie Angaben zu Datum und Uhrzeit des Zugriffs, verarbeitet. STRATO gibt an, vollständige IP-Adressen zur Erkennung und Abwehr von Angriffen höchstens sieben Tage zu speichern. Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO aufgrund unseres berechtigten Interesses an einem sicheren und zuverlässigen Betrieb der Website. Mit STRATO besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO.',
+        en: 'This website and our email communications are hosted by STRATO GmbH, Otto-Ostrowski-Straße 7, 10249 Berlin, Germany. When the website is accessed, technically necessary server log data is processed, in particular the IP address as well as the date and time of access. STRATO states that complete IP addresses are stored for no more than seven days for the purpose of detecting and preventing attacks. The processing is based on Article 6(1)(f) GDPR and our legitimate interest in the secure and reliable operation of the website. We have concluded a data processing agreement with STRATO in accordance with Article 28 GDPR.',
       },
 
       contact2: {
-        de: 'Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.',
-        en: 'This data will not be shared without your consent.',
+        de: 'Die Verarbeitung Ihrer Anfrage erfolgt, soweit sie der Anbahnung oder Durchführung eines Vertrags dient, auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO. Bei sonstigen Anfragen erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht in der sachgerechten Bearbeitung und Beantwortung der an uns gerichteten Anfragen.',
+        en: 'Where your inquiry relates to steps prior to entering into or performing a contract, the processing is based on Article 6(1)(b) GDPR. Other inquiries are processed on the basis of Article 6(1)(f) GDPR. Our legitimate interest is the proper handling and response to inquiries addressed to us.',
       },
 
       contact3: {
-        de: 'Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen. Dazu reicht eine formlose Mitteilung per E-Mail an uns. Die Rechtmäßigkeit der bis zum Widerruf erfolgten Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt. Sofern die Verarbeitung personenbezogener Daten nicht auf einer Einwilligung beruht, erfolgt sie auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung) oder Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer funktionsfähigen Website).',
-        en: 'The processing of the data entered in the contact form is therefore based exclusively on your consent (Art. 6(1)(a) GDPR). You can revoke this consent at any time. An informal email making this request is sufficient. The legality of the data processing operations carried out until the revocation remains unaffected by the revocation. If the processing of personal data is not based on consent, it is carried out on the basis of Article 6(1)(b) GDPR (performance of a contract) or Article 6(1)(f) GDPR (legitimate interest in the proper functioning of the website).',
+        de: 'Kommt aufgrund Ihrer Anfrage ein Auftrag zustande, werden die für die Vertragsabwicklung, Rechnungsstellung und Buchhaltung erforderlichen personenbezogenen Daten zusätzlich in der Buchhaltungssoftware sevDesk verarbeitet. Anbieter ist die sevDesk GmbH, Im Unteren Angel 1, 77652 Offenburg, Deutschland. Die Verarbeitung erfolgt insoweit auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO sowie, soweit gesetzliche Buchführungs- und Aufbewahrungspflichten bestehen, auf Grundlage von Art. 6 Abs. 1 lit. c DSGVO. Mit sevDesk besteht ein Vertrag zur Auftragsverarbeitung gemäß Art. 28 DSGVO.',
+        en: 'If your inquiry results in an order, the personal data required for contract performance, invoicing, and accounting is also processed using the sevDesk accounting software. The provider is sevDesk GmbH, Im Unteren Angel 1, 77652 Offenburg, Germany. This processing is based on Article 6(1)(b) GDPR and, where statutory accounting and retention obligations apply, on Article 6(1)(c) GDPR. We have concluded a data processing agreement with sevDesk in accordance with Article 28 GDPR.',
       },
+
       store: { de: 'Speicherdauer', en: 'Storage Period' },
+
       store1: {
-        de: 'Die von Ihnen im Kontaktformular eingegebenen Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z. B. nach abgeschlossener Bearbeitung Ihrer Anfrage). Gesetzliche Aufbewahrungsfristen bleiben unberührt.Darüber hinaus unterliegen wir bestimmten handels- und steuerrechtlichen Aufbewahrungspflichten, die sich beispielsweise aus der Abgabenordnung (AO) und dem Handelsgesetzbuch (HGB) ergeben. Diese Fristen betragen in der Regel sechs bis zehn Jahre. Während dieses Zeitraums werden die Daten ausschließlich zur Erfüllung der gesetzlichen Aufbewahrungspflichten gespeichert und nach deren Ablauf routinemäßig gelöscht.',
-        en: 'The data you provide in the contact form will be retained by us until you request its deletion, revoke your consent for storage, or the purpose for data storage no longer applies (e.g., after your request has been fully processed). Mandatory statutory retention periods remain unaffected. In addition, we are subject to certain statutory retention obligations under commercial and tax law, such as those arising from the German Fiscal Code (AO) and the Commercial Code (HGB). These retention periods are generally six to ten years. During this time, the data will be stored exclusively for the purpose of complying with legal retention obligations and will be routinely deleted once these periods expire.',
+        de: 'Anfragen, aus denen kein Auftrag entsteht, werden nach abschließender Bearbeitung gelöscht, sobald die weitere Speicherung für die Bearbeitung der Anfrage nicht mehr erforderlich ist und keine gesetzlichen Gründe für eine weitere Aufbewahrung bestehen. Kommt ein Auftrag zustande, werden die für Vertragsabwicklung, Rechnungsstellung und Buchhaltung erforderlichen Daten entsprechend den gesetzlichen handels- und steuerrechtlichen Aufbewahrungspflichten gespeichert. Je nach Art der Unterlage können diese Aufbewahrungsfristen insbesondere sechs, acht oder zehn Jahre betragen. Nach Ablauf der jeweils geltenden Aufbewahrungsfrist werden die Daten gelöscht, sofern keine weitere gesetzliche Grundlage für die Speicherung besteht.',
+        en: 'Inquiries that do not result in an order are deleted after they have been fully processed, as soon as further storage is no longer necessary for handling the inquiry and there is no legal reason to retain the data. If an order is placed, the data required for contract performance, invoicing, and accounting is retained in accordance with applicable statutory commercial and tax retention obligations. Depending on the type of document, these retention periods may in particular be six, eight, or ten years. After the applicable retention period has expired, the data is deleted unless there is another legal basis requiring further storage.',
       },
+
       rights: { de: 'Ihre Rechte', en: 'Your Rights' },
+
       rights1: {
-        de: 'Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf:',
-        en: 'Under applicable law, you have the right to:',
+        de: 'Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen insbesondere das Recht auf:',
+        en: 'Under applicable law, you have in particular the right to:',
       },
+
       rightsList1: {
         de: 'Auskunft über Ihre gespeicherten personenbezogenen Daten,',
-        en: 'Access your stored personal data,',
+        en: 'Access to your stored personal data,',
       },
+
       rightsList2: { de: 'Berichtigung,', en: 'Rectification,' },
+
       rightsList3: { de: 'Löschung,', en: 'Erasure,' },
+
       rightsList4: {
         de: 'Einschränkung der Verarbeitung,',
         en: 'Restriction of processing,',
       },
+
       rightsList5: { de: 'Datenübertragbarkeit,', en: 'Data portability,' },
+
       rightsList6: {
-        de: 'sowie Widerspruch gegen die Verarbeitung.',
-        en: 'And objection to processing.<',
+        de: 'sowie Widerspruch gegen die Verarbeitung, soweit die gesetzlichen Voraussetzungen hierfür vorliegen.',
+        en: 'And objection to processing where the statutory requirements are met.',
       },
 
       rights2: {
         de: 'Zur Ausübung Ihrer Rechte genügt eine formlose Mitteilung an:',
         en: 'To exercise your rights, a simple informal message is sufficient to:',
       },
+
       encrypt: {
         de: 'SSL- bzw. TLS-Verschlüsselung',
         en: 'SSL or TLS Encryption',
       },
+
       encrypt1: {
-        de: 'Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Anfragen über das Kontaktformular, eine SSL- bzw. TLS-Verschlüsselung. Wir treffen geeignete technische und organisatorische Sicherheitsmaßnahmen, um Ihre Daten vor Verlust, Missbrauch oder unbefugtem Zugriff zu schützen.',
-        en: 'For security reasons and to protect the transmission of confidential content, such as inquiries via the contact form, this site uses SSL or TLS encryption. We take appropriate technical and organizational security measures to protect your data against loss, misuse, or unauthorized access.',
+        de: 'Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, insbesondere von Anfragen über das Kontaktformular, eine SSL- bzw. TLS-Verschlüsselung. Wir treffen angemessene technische und organisatorische Maßnahmen, um personenbezogene Daten vor Verlust, Missbrauch und unbefugtem Zugriff zu schützen.',
+        en: 'For security reasons and to protect the transmission of confidential content, in particular inquiries submitted via the contact form, this website uses SSL or TLS encryption. We take appropriate technical and organizational measures to protect personal data against loss, misuse, and unauthorized access.',
       },
+
       forward: {
         title: {
           de: 'Datenübermittlung in Drittstaaten',
           en: 'Data Transfers to Third Countries',
         },
         desc: {
-          de: 'Eine Übermittlung personenbezogener Daten in Staaten außerhalb der EU bzw. des EWR findet nicht statt.',
-          en: 'No personal data is transferred to countries outside the EU or the EEA.',
+          de: 'Für den unmittelbaren Betrieb dieser Website und die Bearbeitung von Kontaktanfragen setzen wir keine Dienste ein, deren Zweck eine Übermittlung personenbezogener Daten in Staaten außerhalb der Europäischen Union oder des Europäischen Wirtschaftsraums ist. Soweit von unseren Auftragsverarbeitern, insbesondere STRATO oder sevDesk, Unterauftragnehmer eingesetzt werden und dabei eine Verarbeitung in einem Drittstaat erfolgt, erfolgt eine solche Übermittlung nur unter Beachtung der Voraussetzungen der Art. 44 ff. DSGVO und der jeweils erforderlichen geeigneten Garantien.',
+          en: 'For the direct operation of this website and the handling of contact inquiries, we do not use services whose purpose is to transfer personal data to countries outside the European Union or the European Economic Area. If our processors, in particular STRATO or sevDesk, use subprocessors and processing takes place in a third country, any such transfer is carried out only in accordance with the requirements of Articles 44 et seq. GDPR and the applicable appropriate safeguards.',
         },
       },
+
       complaint: {
         title: {
           de: 'Beschwerderecht bei einer Aufsichtsbehörde',
-          en: ' Right to Lodge a Complaint with a Supervisory Authority',
+          en: 'Right to Lodge a Complaint with a Supervisory Authority',
         },
         desc: {
-          de: 'Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt, haben Sie das Recht auf Beschwerde bei einer Datenschutzaufsichtsbehörde (Art. 77 DSGVO).',
-          en: 'If you believe that the processing of your personal data violates applicable data protection laws, you have the right to lodge a complaint with a data protection supervisory authority (Article 77 GDPR).',
+          de: 'Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen geltendes Datenschutzrecht verstößt, haben Sie gemäß Art. 77 DSGVO das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. Für private Unternehmen mit Sitz in Bayern ist grundsätzlich das Bayerische Landesamt für Datenschutzaufsicht (BayLDA), Promenade 18, 91522 Ansbach, Deutschland, zuständig.',
+          en: 'If you believe that the processing of your personal data violates applicable data protection law, you have the right under Article 77 GDPR to lodge a complaint with a data protection supervisory authority. For private companies based in Bavaria, the competent authority is generally the Bavarian State Office for Data Protection Supervision (BayLDA), Promenade 18, 91522 Ansbach, Germany.',
         },
       },
 
       cookies: {
         title: {
-          de: 'Keine Cookies, kein Tracking',
-          en: 'No Cookies, No Tracking',
+          de: 'Keine Tracking- oder Analyse-Cookies',
+          en: 'No Tracking or Analytics Cookies',
         },
         desc: {
-          de: 'Auf dieser Website werden keine Cookies gesetzt und keine Tracking- oder Analyse-Tools verwendet. Auf dieser Website werden keine externen Inhalte von Drittanbietern eingebunden (z. B. YouTube, Google Maps, Social Media Plugins).',
-          en: 'This website does not use cookies and does not employ any tracking or analytics tools.No external content from third-party providers is embedded on this website (e.g., YouTube, Google Maps, social media plugins).',
+          de: 'Wir setzen auf dieser Website keine Cookies zu Analyse-, Tracking- oder Marketingzwecken ein und verwenden keine Tracking- oder Analyse-Tools. Es werden keine externen Inhalte von Drittanbietern wie YouTube, Google Maps oder Social-Media-Plugins eingebunden. Verwendete Schriftarten werden lokal bereitgestellt. Soweit der Hostinganbieter technisch notwendige Session-Cookies einsetzen sollte, dienen diese ausschließlich der technischen Bereitstellung der Website und nicht der Analyse oder dem Tracking von Besuchern.',
+          en: 'We do not use cookies for analytics, tracking, or marketing purposes on this website and do not use any tracking or analytics tools. No external third-party content such as YouTube, Google Maps, or social media plugins is embedded. Any fonts used are hosted locally. If the hosting provider uses technically necessary session cookies, they are used solely for the technical provision of the website and not for analytics or visitor tracking.',
         },
       },
+
       changes: {
         title: {
           de: 'Änderung dieser Datenschutzerklärung',
           en: 'Changes to This Privacy Policy',
         },
         desc: {
-          de: 'Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht. Es gilt jeweils die zum Zeitpunkt des Besuchs gültige Fassung.',
-          en: 'We reserve the right to amend this privacy policy to ensure it always complies with current legal requirements. The version in effect at the time of your visit shall apply.',
+          de: 'Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich die Rechtslage, die Website oder die von uns eingesetzten Dienste ändern. Es gilt jeweils die zum Zeitpunkt des Besuchs veröffentlichte Fassung. Stand: August 2026.',
+          en: 'We reserve the right to amend this privacy policy if the legal requirements, the website, or the services we use change. The version published at the time of your visit applies. Last updated: August 2026.',
         },
       },
     },
